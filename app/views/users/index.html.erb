@@ -1,8 +1,13 @@
 <h3>Marvel Tap-It</h3>
 
 <%= form_for @user, class:  'new-user-form' do |f|%>
+
+  <%= f.label :username %>
   <%= f.text_field :username %>
+  <br>
+  <%= f.label :password %>
   <%= f.password_field :password %>
+  <br>
   <%= f.password_field :password_confirmation %>
   <%= f.submit %>
 <% end %>
@@ -21,18 +26,18 @@
   $('input[name="user[password]"]').on('keyup', function(){
     var field = $(this);
     if (field.val().length < 8){
-      $(this).css({backgroundColor: 'red'});
+      $(this).css({backgroundColor: 'pink'});
     } else {
-      $(this).css({backgroundColor: 'green'});
+      $(this).css({backgroundColor: 'lightgreen'});
     }
   })
   $('input[name="user[password_confirmation]"]').on('keyup', function(){
     var passwordConfirmationField = $(this);
     var passwordField = $('input[name="user[password]"]');
     if (passwordField.val() != passwordConfirmationField.val() ){
-      $(this).css({backgroundColor: 'red'});
+      $(this).css({backgroundColor: 'pink'});
     } else {
-      $(this).css({backgroundColor: 'green'});
+      $(this).css({backgroundColor: 'lightgreen'});
     }
   })
 </script>
