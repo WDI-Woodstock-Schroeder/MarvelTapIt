@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
       # TRUE Place into the seesion that user's id
       session[:user_id] = user.id
       # Redirect to ...
+      redirect_to '/users/show'
     else
       # False Redirect to ... back to login
       redirect_to '/sign_in'
