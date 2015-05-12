@@ -7,9 +7,11 @@ class SessionsController < ApplicationController
       # TRUE Place into the seesion that user's id
       session[:user_id] = user.id
       # Redirect to ...
+      redirect_to 
     else
       # False Redirect to ... back to login
       redirect_to '/sign_in'
+    end
   end
 
   def log_out_behavior
