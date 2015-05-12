@@ -1,4 +1,32 @@
 Rails.application.routes.draw do
+  get 'sessions/log_in_behavior'
+
+  get 'sessions/log_out_behavior'
+
+  get 'users/index'
+
+  get 'users/new'
+
+  get 'users/edit'
+
+  get 'users/show'
+
+  get 'villains/index'
+
+  get 'villains/new'
+
+  get 'villains/edit'
+
+  get 'villains/show'
+
+  get 'heroes/index'
+
+  get 'heroes/new'
+
+  get 'heroes/edit'
+
+  get 'heroes/show'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
