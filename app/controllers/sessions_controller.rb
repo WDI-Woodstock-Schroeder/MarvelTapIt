@@ -10,6 +10,7 @@ class SessionsController < ApplicationController
     else
       # False Redirect to ... back to login
       redirect_to '/sign_in'
+    end
   end
 
   def log_out_behavior
