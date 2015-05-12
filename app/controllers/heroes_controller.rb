@@ -1,13 +1,9 @@
 class HeroesController < ApplicationController
   def index
-  end
-
-  def new
-  end
-
-  def edit
+    @heroes = Hero.all
   end
 
   def show
+    @hero = Hero.find(params[:id])
   end
 end
