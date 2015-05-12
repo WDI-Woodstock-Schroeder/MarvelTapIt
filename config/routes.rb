@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :villains
 
   get '/' => 'users#index'
+  get 'register' => 'users#new'
+  get 'sign_in' => 'users#sign_in'
 
   # get 'sessions/log_in_behavior'
   #

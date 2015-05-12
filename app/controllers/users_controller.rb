@@ -9,7 +9,9 @@ class UsersController < ApplicationController
 
   def create
     user = User.create(user_params)
-    redirect_to "/"
+    #redirect_to "/"
+    redirect_to "/register"
+
   end
 
   def edit
@@ -34,6 +36,10 @@ class UsersController < ApplicationController
   def profile
     authenticate!
     @user = current_user
+  end
+
+  def sign_in
+
   end
 
   private
