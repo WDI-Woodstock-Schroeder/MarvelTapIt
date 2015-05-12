@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :heroes
   resources :villains
 
+  get '/' => 'users#index'
+
   # get 'sessions/log_in_behavior'
   #
   # get 'sessions/log_out_behavior'
@@ -13,7 +15,7 @@ Rails.application.routes.draw do
   # get 'users/new'
   #
   # get 'users/edit'
-  # 
+  #
   # get 'users/show'
   #
   # get 'villains/index'

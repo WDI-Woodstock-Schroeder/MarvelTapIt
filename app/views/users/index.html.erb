@@ -2,27 +2,6 @@
 
 <%= render partial: 'navigation' %>
 
-<%= form_for @user, class:  'new-user-form' do |f|%>
-
-  <%= f.label :username %>
-  <%= f.text_field :username %>
-  <br>
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-  <br>
-  <%= f.password_field :password_confirmation %>
-  <%= f.submit %>
-<% end %>
-
-<ul>
-  <% @users.each do |user| %>
-    <li>
-      <%= user.username %>
-    </li>
-  <% end %>
-</ul>
-
-
 
 <script type="text/javascript">
   $('input[name="user[password]"]').on('keyup', function(){
