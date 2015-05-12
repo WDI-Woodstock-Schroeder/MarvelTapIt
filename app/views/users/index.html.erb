@@ -1,2 +1,38 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<h3>Marvel Tap-It</h3>
+
+<%= form_for @user, class:  'new-user-form' do |f|%>
+  <%= f.text_field :username %>
+  <%= f.password_field :password %>
+  <%= f.password_field :password_confirmation %>
+  <%= f.submit %>
+<% end %>
+
+<ul>
+  <% @users.each do |user| %>
+    <li>
+      <%= user.username %>
+    </li>
+  <% end %>
+</ul>
+
+
+
+<script type="text/javascript">
+  $('input[name="user[password]"]').on('keyup', function(){
+    var field = $(this);
+    if (field.val().length < 8){
+      $(this).css({backgroundColor: 'red'});
+    } else {
+      $(this).css({backgroundColor: 'green'});
+    }
+  })
+  $('input[name="user[password_confirmation]"]').on('keyup', function(){
+    var passwordConfirmationField = $(this);
+    var passwordField = $('input[name="user[password]"]');
+    if (passwordField.val() != passwordConfirmationField.val() ){
+      $(this).css({backgroundColor: 'red'});
+    } else {
+      $(this).css({backgroundColor: 'green'});
+    }
+  })
+</script>
