@@ -1,147 +1,143 @@
 <!-- Marvel: Tap It -->
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/assets/stylesheets/users.scss" media="screen">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script type="text/javascript" src="/assets/javascripts/users.js">
-    </script>
-  </head>
+<body id="wrapper">
 
-  <body id="wrapper">
+  <nav>
+    <div class="logo">
+      <h1>Marvel: TapiT</h1>
+    </div>
+  </nav>
 
-    <nav>
-      <div class="logo">
-        <h1>Marvel: TapiT</h1>
+
+  <div class="container">
+
+    <div id="hero-list">
+
+      <h4>Select a Hero</h4>
+
+    <!-- start hidden div for player 1 selection -->
+      <div class="six column selected-hero">
+
+        <%= image_tag("black_widow.jpg", class: "hero") do %>
+        <% end %>
+        <!-- <img class="hero" data-character="1009189" src="/app/assets/images/black_widow.jpg"/> -->
+        <div class="hero-bio">
+          <p>THIS IS DATARS for selection 1</p>
+          <button type="button" id="reselect-hero">Reselect</button>
+        </div>
       </div>
-    </nav>
+    <!-- end hidden div for player 1 selection -->
 
+    <!-- start row 1 of heroes -->
+      <div class="row">
+        <div class="four columns">
 
-    <div class="container">
-
-      <div id="hero-list">
-
-        <h4>Select a Hero</h4>
-
-      <!-- start hidden div for player 1 selection -->
-        <div class="six column selected-hero">
-          <img class="hero" data-character="1009189" src="/Users/Marion/dev/wdi/spikes/test/assets/images/black_widow.jpg"/>
-          <div class="hero-bio">
-            <p>THIS IS DATARS for selection 1</p>
-            <button type="button" id="reselect-hero">Reselect</button>
-          </div>
+          <%= image_tag("black_widow.jpg", class: "hero-thumb") do %>
+          <% end %>
+          <!-- <img class="hero-thumb" data-character="1009189" src="/images/black_widow.jpg"/> -->
         </div>
-      <!-- end hidden div for player 1 selection -->
 
-      <!-- start row 1 of heroes -->
-        <div class="row">
-          <div class="four columns">
-            <img class="hero-thumb" data-character="1009189" src="/Users/Marion/dev/wdi/spikes/test/assets/images/black_widow.jpg"/>
-          </div>
-
-          <div class="four columns">
-            <img class="hero-thumb" data-character="1009220" src="/Users/Marion/dev/wdi/spikes/test/assets/images/captain_america.jpg"/>
-          </div>
-
-          <div class="four columns">
-            <img class ="hero-thumb" data-character="1009288"  src="/Users/Marion/dev/wdi/spikes/test/assets/images/elektra.jpg"/>
-          </div>
+        <div class="four columns">
+          <img class="hero-thumb" data-character="1009220" src="/app/assets/images/captain_america.jpg"/>
         </div>
-      <!-- end row 1 of heroes -->
 
-      <!-- start row 2 of heroes -->
-        <div class="row">
-          <div class="four columns">
-            <img class="hero-thumb" data-character="1009351" src="/Users/Marion/dev/wdi/spikes/test/assets/images/hulk.jpg"/>
-          </div>
-
-          <div class="four columns">
-            <img class="hero-thumb" data-character="1009368" src="/Users/Marion/dev/wdi/spikes/test/assets/images/iron_man.jpg"/>
-          </div>
-
-          <div class="four columns">
-            <img class="hero-thumb" data-character="1009629" src="/Users/Marion/dev/wdi/spikes/test/assets/images/storm.jpg"/>
-          </div>
+        <div class="four columns">
+          <img class ="hero-thumb" data-character="1009288"  src="/app/assets/images/elektra.jpg"/>
         </div>
-      <!-- end row 2 of heroes -->
+      </div>
+    <!-- end row 1 of heroes -->
 
-      <!-- start row 3 of heroes -->
-        <div class="row">
-          <div class="four columns">
-            <img class="hero-thumb" data-character="1009664" src="/Users/Marion/dev/wdi/spikes/test/assets/images/thor.jpg"/>
-          </div>
-
-          <div class="four columns">
-            <img class="hero-thumb" data-character="1009718" src="/Users/Marion/dev/wdi/spikes/test/assets/images/wolverine.jpg"/>
-          </div>
+    <!-- start row 2 of heroes -->
+      <div class="row">
+        <div class="four columns">
+          <img class="hero-thumb" data-character="1009351" src="/app/assets/images/hulk.jpg"/>
         </div>
-      <!-- end row 3 of heroes -->
-      </div>  <!-- end div id="hero-list" -->
 
-
-      <div id="nemesis-list">
-
-        <h4>Select a Nemesis</h4>
-
-      <!-- start hidden div for player 2 selection -->
-        <div class="six column selected-nemesis">
-          <img class="nemesis" data-character="1009189" src="/Users/Marion/dev/wdi/spikes/test/assets/images/black_widow.jpg"/>
-          <div class="nemesis-bio">
-            <p>THIS IS DATARS for selection 2</p>
-            <button type="button" id="reselect-nemesis">Reselect</button>
-          </div>
+        <div class="four columns">
+          <img class="hero-thumb" data-character="1009368" src="/app/assets/images/iron_man.jpg"/>
         </div>
-      <!-- end hidden div for player 2 selection -->
 
-      <!-- start row 1 of nemeses -->
-        <div class="row">
-          <div class="four columns">
-              <img class="nemesis-thumb" data-character="1009156" src="/Users/Marion/dev/wdi/spikes/test/assets/images/apocalypse.jpg"/>
-          </div>
-
-          <div class="four columns">
-            <img class="nemesis-thumb" data-character="1009227" src="/Users/Marion/dev/wdi/spikes/test/assets/images/carnage.jpg"/>
-          </div>
-
-          <div class="four columns">
-            <img class="nemesis-thumb" data-character="1009281" src="/Users/Marion/dev/wdi/spikes/test/assets/images/doctor_doom.jpg"/>
-          </div>
+        <div class="four columns">
+          <img class="hero-thumb" data-character="1009629" src="/app/assets/images/storm.jpg"/>
         </div>
-      <!-- end row 1 of nemeses -->
+      </div>
+    <!-- end row 2 of heroes -->
 
-      <!-- start row 2 of nemeses -->
-        <div class="row">
-          <div class="four columns">
-            <img class="nemesis-thumb" data-character="1009407" src="/Users/Marion/dev/wdi/spikes/test/assets/images/loki.jpg"/>
-          </div>
-
-          <div class="four columns">
-            <img class="nemesis-thumb" data-character="1009417" src="/Users/Marion/dev/wdi/spikes/test/assets/images/magneto.jpg"/>
-          </div>
-
-          <div class="four columns">
-            <img class="nemesis-thumb" data-character="1009421" src="/Users/Marion/dev/wdi/spikes/test/assets/images/mandarin.jpg"/>
-          </div>
+    <!-- start row 3 of heroes -->
+      <div class="row">
+        <div class="four columns">
+          <img class="hero-thumb" data-character="1009664" src="/app/assets/images/thor.jpg"/>
         </div>
-      <!-- end row 2 of nemeses -->
 
-      <!-- start row 3 of nemeses -->
-        <div class="row">
-          <div class="four columns">
-            <img class="nemesis-thumb" data-character="1009465" src="/Users/Marion/dev/wdi/spikes/test/assets/images/mystique.jpg"/>
-          </div>
-
-          <div class="four columns">
-            <img class="nemesis-thumb" data-character="1009685" src="/Users/Marion/dev/wdi/spikes/test/assets/images/ultron.jpg"/>
-          </div>
+        <div class="four columns">
+          <img class="hero-thumb" data-character="1009718" src="/app/assets/images/wolverine.jpg"/>
         </div>
-      <!-- end row 3 of nemeses -->
-      </div>  <!-- end div id="nemesis-list" -->
-    </div>  <!-- end div class="container" -->
+      </div>
+    <!-- end row 3 of heroes -->
+    </div>  <!-- end div id="hero-list" -->
 
-    <!-- <footer>
-      <p>oh my stars and garters!</p>
-    </footer> -->
 
-  </body>
-</html>
+    <div id="nemesis-list">
+
+      <h4>Select a Nemesis</h4>
+
+    <!-- start hidden div for player 2 selection -->
+      <div class="six column selected-nemesis">
+        <img class="nemesis" data-character="1009189" src="/app/assets/images/black_widow.jpg"/>
+        <div class="nemesis-bio">
+          <p>THIS IS DATARS for selection 2</p>
+          <button type="button" id="reselect-nemesis">Reselect</button>
+        </div>
+      </div>
+    <!-- end hidden div for player 2 selection -->
+
+    <!-- start row 1 of nemeses -->
+      <div class="row">
+        <div class="four columns">
+            <img class="nemesis-thumb" data-character="1009156" src="/app/assets/images/apocalypse.jpg"/>
+        </div>
+
+        <div class="four columns">
+          <img class="nemesis-thumb" data-character="1009227" src="/app/assets/images/carnage.jpg"/>
+        </div>
+
+        <div class="four columns">
+          <img class="nemesis-thumb" data-character="1009281" src="/app/assets/images/doctor_doom.jpg"/>
+        </div>
+      </div>
+    <!-- end row 1 of nemeses -->
+
+    <!-- start row 2 of nemeses -->
+      <div class="row">
+        <div class="four columns">
+          <img class="nemesis-thumb" data-character="1009407" src="/app/assets/images/loki.jpg"/>
+        </div>
+
+        <div class="four columns">
+          <img class="nemesis-thumb" data-character="1009417" src="/app/assets/images/magneto.jpg"/>
+        </div>
+
+        <div class="four columns">
+          <img class="nemesis-thumb" data-character="1009421" src="/assets/images/mandarin.jpg"/>
+        </div>
+      </div>
+    <!-- end row 2 of nemeses -->
+
+    <!-- start row 3 of nemeses -->
+      <div class="row">
+        <div class="four columns">
+          <img class="nemesis-thumb" data-character="1009465" src="/assets/images/mystique.jpg"/>
+        </div>
+
+        <div class="four columns">
+          <img class="nemesis-thumb" data-character="1009685" src="/assets/images/ultron.jpg"/>
+        </div>
+      </div>
+    <!-- end row 3 of nemeses -->
+    </div>  <!-- end div id="nemesis-list" -->
+  </div>  <!-- end div class="container" -->
+
+  <!-- <footer>
+    <p>oh my stars and garters!</p>
+  </footer> -->
+
+</body>
