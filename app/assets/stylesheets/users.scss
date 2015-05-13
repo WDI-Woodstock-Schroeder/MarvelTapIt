@@ -5,117 +5,115 @@
 // // pick a player page styles :::
 //
 //
-// *{
-//   display: block;
-// }
-//
-// body {
-//   padding: 0px;
-//   margin: 0px;
-// }
-//
-// #wrapper{
-//   height: 600px;
-//   width: 100%;
-//   background-image: url(http://ipadair.2048x.org/wp-content/miniwallpaper/20121206/12ekcry4pkz44.jpg);
-//   background-size: cover;
-//   background-position: center;
-//   background-repeat: no-repeat;
-// }
-//
-// nav{
-//   height: 10%;
-// }
-//
-// .container{
-//   height: 80%;
-// }
-//
-//
-// footer{
-//   height: 5%;
-// }
-//
-// .logo{
-//
-// }
-//
-// .row{
-//   height: 20%;
-// }
-//
-// #hero-list{
-//   width: 45%;
-//   margin-right: 5%;
-//   padding: 0;
-//   float: left;
-// }
-//
-// #nemesis-list{
-//   width: 45%;
-//   margin-left: 5%;
-//   padding: 0;
-//   float: left;
-// }
-//
-// .hero-thumb{
-//   width: 90%;
-//   margin: 5px;
-//   padding: 2px;
-//   border-radius: 100%;
-//   border: 2px solid rgba(20, 133, 204, 1);
-//   background-color: rgba(255, 255, 255, 1);
-// }
-//
-// .nemesis-thumb{
-//   width: 90%;
-//   margin: 5px;
-//   padding: 2px;
-//   border-radius: 100%;
-//   border: 2px solid rgba(255, 0, 0, 1);
-//   background-color: rgba(255, 255, 255, 1);
-// }
-//
-// div.selected-hero{
-//   z-index: 1;
-//   display: none;
-// }
-//
-// div.selected-nemesis{
-//   z-index: 1;
-//   display: none;
-// }
-//
-// .hero{
-//   width: 80%;
-//   margin: 0 10%;
-//   padding: 5px;
-//   border-radius: 100%;
-//   border: 5px solid rgba(20, 133, 204, 1);
-//   background-color: rgba(255, 255, 255, 1);
-// }
-//
-// .nemesis{
-//   width: 80%;
-//   margin: 0 10%;
-//   padding: 5px;
-//   border-radius: 100%;
-//   border: 5px solid rgba(255, 0, 0, 1);
-//   background-color: rgba(255, 255, 255, 1);
-// }
-//
-// div.hero-bio{
-//   margin: 10px 0;
-//   padding: 10px;
-//   border: 5px solid rgba(20, 133, 204, 1);
-//   border-radius: 30px;
-//   background-color: rgba(255, 255, 255, 1);
-// }
-//
-// div.nemesis-bio{
-//   margin: 10px 0;
-//   padding: 10px;
-//   border: 5px solid rgba(255, 0, 0, 1);
-//   border-radius: 30px;
-//   background-color: rgba(255, 255, 255, 1);
-// }
+
+
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+#wrapper{
+  height: 600px;
+  width: 100%;
+  background-image: url(http://ipadair.2048x.org/wp-content/miniwallpaper/20121206/12ekcry4pkz44.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+nav{
+  height: 10%;
+}
+
+.container{
+  height: 80%;
+}
+
+
+footer{
+  height: 5%;
+}
+
+.logo{
+
+}
+
+.row{
+  height: 20%;
+}
+
+#hero-list{
+  width: 45%;
+  margin-right: 5%;
+  padding: 0;
+  float: left;
+}
+
+#nemesis-list{
+  width: 45%;
+  margin-left: 5%;
+  padding: 0;
+  float: left;
+}
+
+.hero-thumb{
+  width: 90%;
+  margin: 5px;
+  padding: 2px;
+  border-radius: 100%;
+  border: 2px solid rgba(20, 133, 204, 1);
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.nemesis-thumb{
+  width: 90%;
+  margin: 5px;
+  padding: 2px;
+  border-radius: 100%;
+  border: 2px solid rgba(255, 0, 0, 1);
+  background-color: rgba(255, 255, 255, 1);
+}
+
+div.selected-hero{
+  z-index: 1;
+  display: none;
+}
+
+div.selected-nemesis{
+  z-index: 1;
+  display: none;
+}
+
+.hero{
+  width: 80%;
+  margin: 0 10%;
+  padding: 5px;
+  border-radius: 100%;
+  border: 5px solid rgba(20, 133, 204, 1);
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.nemesis{
+  width: 80%;
+  margin: 0 10%;
+  padding: 5px;
+  border-radius: 100%;
+  border: 5px solid rgba(255, 0, 0, 1);
+  background-color: rgba(255, 255, 255, 1);
+}
+
+div.hero-bio{
+  margin: 10px 0;
+  padding: 10px;
+  border: 5px solid rgba(20, 133, 204, 1);
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+div.nemesis-bio{
+  margin: 10px 0;
+  padding: 10px;
+  border: 5px solid rgba(255, 0, 0, 1);
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 1);
+}
