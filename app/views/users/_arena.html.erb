@@ -3,30 +3,42 @@
   <title>Arena</title>
 </head>
 
-<nav>
-  <a href="/"><h3>Home</h3></a>
-  <a href="#"><h3>Log Out</h3></a>
-</nav>
+<body>
+  <nav>
+    <a href="/"><h3>Home</h3></a>
+    <a href="#"><h3>Log Out</h3></a>
+  </nav>
 
-  <script type="text/template" class="template">
+  <div class="timer">
+    <!-- we might be able to use CSS to build this out... -->
+  </div>
 
-    <div class="heroImage">
-      data-character="<%= data-character %>" 
-      <%%= hero.health %>
-      <!-- we might be able to use CSS to build out the health bar... -->
-    </div>
+</body>
+    <script type="text/template" class="template">
 
-    <div class="nemesisImage">
-      <%%= nemesis.img %>
-      <%%= nemesis.health %>
-      <!-- we might be able to use CSS to build out the health bar... -->
-    </div>
+      <div class="heroImage">
+        data-character="<%= data-character %>"
+        <%%= hero.health %>
+        <!-- html below is for health bar -->
+        <div class="health-bar" data-total="1000" data-value="1000">
+          <div class="bar">
+        <div class="hit"></div>
+      </div>
 
-    <div class="timer">
-      <!-- we might be able to use CSS to build this out... -->
-    </div>
+      <div class="nemesisImage">
+        <%%= nemesis.img %>
+        <%%= nemesis.health %>
+        <!--html below is for health bar -->
+        <div class="health-bar" data-total="1000" data-value="1000">
+          <div class="bar">
+  	    <div class="hit"></div>
+  </div>
+</div>
 
+<br />
 
+<button class="damage random">hit random</button>
+      </div>
 
-  </script>
+    </script>
 </html>
