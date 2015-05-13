@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   get 'register' => 'users#new'
   get 'sign_in' => 'users#sign_in'
 
+  post '/log_in' => 'sessions#log_in_behavior'
+  delete '/log_out' => 'sessions#log_out_behavior'
+
   # get 'sessions/log_in_behavior'
   #
   # get 'sessions/log_out_behavior'

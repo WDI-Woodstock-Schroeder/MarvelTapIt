@@ -1,13 +1,37 @@
-<h1>Users#new</h1>
+<div class="container">
+  <section class="row">
+    <div class="twelve columns", class="submit_form">
+      <h1>Register</h1>
+      <%= form_for @user, class:  'new-user-form' do |f|%>
+        <%= f.label :username %>
+        <%= f.text_field :username %>
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+        <%= f.label :confirm_password %>
+        <%= f.password_field :password_confirmation %>
+        <br>
+        <%= f.submit %>
+      <% end %>
+    </div>
+  </section>
+</div>
 
-<%= form_for @user, class:  'new-user-form' do |f|%>
-
-  <%= f.label :username %>
-  <%= f.text_field :username %>
-  <br>
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-  <br>
-  <%= f.password_field :password_confirmation %>
-  <%= f.submit %>
-<% end %>
+<script type="text/javascript">
+  $('input[name="user[password]"]').on('keyup', function(){
+    var field = $(this);
+    if (field.val().length < 8){
+      $(this).css({backgroundColor: 'pink'});
+    } else {
+      $(this).css({backgroundColor: 'lightgreen'});
+    }
+  })
+  $('input[name="user[password_confirmation]"]').on('keyup', function(){
+    var passwordConfirmationField = $(this);
+    var passwordField = $('input[name="user[password]"]');
+    if (passwordField.val() != passwordConfirmationField.val() ){
+      $(this).css({backgroundColor: 'pink'});
+    } else {
+      $(this).css({backgroundColor: 'lightgreen'});
+    }
+  })
+</script>
