@@ -2,6 +2,35 @@
 <html>
 <head>
   <title>Working</title>
+
+  <script type='text/template' id='sample'>
+    <div id="<%%= id %>">
+      <%%= message %>
+    </div>
+  </script>
+
+  <script type='text/template' id="arena">
+    <img src="<%%= hero.img %>" class="heroImage" data-character="<%%= hero.name %>">
+      <%%= hero.health %>
+      <!-- html below is for health bar -->
+      <div class="health-bar" data-total="1000" data-value="1000">
+        <div class="bar">
+      <div class="hit"></div>
+    </div>
+
+    <img src="<%%= nemesis.img %>" class="nemesisImage" data-character="<%%= nemesis.name %>">
+      <%%= nemesis.health %>
+      <!--html below is for health bar -->
+      <div class="health-bar" data-total="1000" data-value="1000">
+        <div class="bar">
+      <div class="hit"></div>
+
+      <br />
+
+      <button class="damage random">hit random</button>
+    </div>
+  </script>
+
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= javascript_include_tag 'application'%>
   <%= csrf_meta_tags %>
