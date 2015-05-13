@@ -25,8 +25,8 @@ $(document).ready(function() {
         $(".hero-thumb").hide(500)
         $(".selected-hero").show(500)
 
-        name = data.data.results[0].name;
-        description = data.data.results[0].description;
+        hname = data.data.results[0].name;
+        hdescription = data.data.results[0].description;
 
         hero.name = name;
         hero.description = description;
@@ -79,8 +79,8 @@ $(document).ready(function() {
         $(".nemesis-thumb").hide(500)
         $(".selected-nemesis").show(500)
 
-        name = data.data.results[0].name;
-        description = data.data.results[0].description;
+        nname = data.data.results[0].name;
+        ndescription = data.data.results[0].description;
 
         // remove any page elements with class 'nemesis'
         $('.nemesis').remove()
