@@ -36,6 +36,11 @@ $(document).ready(function() {
 
         $('.selected-hero').prepend(img);
 
+        // if hero and nemesis exist, show play button
+        if ($(".nemesis").length && $(".hero").length) {
+          $(".play").show(500);
+        };
+
       }
     })
 
@@ -80,6 +85,11 @@ $(document).ready(function() {
         img.className = "nemesis";
 
         $('.selected-nemesis').prepend(img);
+
+        // if nemesis and hero exist, show play button
+        if ($(".nemesis").length && $(".hero").length) {
+          $(".play").show(500);
+        };
       }
     })
 
@@ -89,10 +99,9 @@ $(document).ready(function() {
       $(".nemesis-thumb").show(500);
     });
 
-    // hide all the heroes
-    if ($(".nemesis") && $(".hero")){
-      $(".play").show(500);
-    };
-
   });
+
+
+
+
 })
