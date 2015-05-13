@@ -30,9 +30,13 @@ $(document).ready(function() {
           thumbnail = path + "." + extension;
 
 
-          $(".selected-hero").html(function() {
-              return "<img src=" + thumbnail + "/><div class='hero-bio'><p>THIS IS DATARS for selection 1</p><button type='button' id='reselect-hero'>Reselect</button></div>";
+
+            function escapeRegExp(name){
+              var imgsrc = name.replace(/\S/i, "\\$&");
+              var html = "<img src=" + name + ".jpg" + " />";
             });
+
+            $(".selected-hero").html(html)
       }
     })
 
