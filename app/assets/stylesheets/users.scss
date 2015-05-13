@@ -22,7 +22,7 @@ body {
 #wrapper{
   height: 600px;
   width: 100%;
-  background-image: url(https://studiomaury.files.wordpress.com/2013/11/224.jpg);
+  background-image: url(http://ipadair.2048x.org/wp-content/miniwallpaper/20121206/12ekcry4pkz44.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -63,18 +63,64 @@ footer{
   float: left;
 }
 
-img.hero-thumb{
+.hero-thumb{
   width: 90%;
   margin: 5px;
   padding: 2px;
   border-radius: 100%;
   border: 2px solid rgba(20, 133, 204, 1);
+  background-color: rgba(255, 255, 255, 1);
 }
 
-img.nemesis-thumb{
+.nemesis-thumb{
   width: 90%;
   margin: 5px;
   padding: 2px;
   border-radius: 100%;
   border: 2px solid rgba(255, 0, 0, 1);
+  background-color: rgba(255, 255, 255, 1);
+}
+
+div.selected-hero{
+  z-index: 1;
+  display: none;
+}
+
+div.selected-nemesis{
+  z-index: 1;
+  display: none;
+}
+
+.hero{
+  width: 80%;
+  margin: 0 10%;
+  padding: 5px;
+  border-radius: 100%;
+  border: 5px solid rgba(20, 133, 204, 1);
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.nemesis{
+  width: 80%;
+  margin: 0 10%;
+  padding: 5px;
+  border-radius: 100%;
+  border: 5px solid rgba(255, 0, 0, 1);
+  background-color: rgba(255, 255, 255, 1);
+}
+
+div.hero-bio{
+  margin: 10px 0;
+  padding: 10px;
+  border: 5px solid rgba(20, 133, 204, 1);
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+div.nemesis-bio{
+  margin: 10px 0;
+  padding: 10px;
+  border: 5px solid rgba(255, 0, 0, 1);
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 1);
 }

@@ -16,32 +16,27 @@
 
     <!-- start hidden div for player 1 selection -->
       <div class="six column selected-hero">
-
-        <%= image_tag("black_widow.jpg", class: "hero") do %>
-        <% end %>
-        <!-- <img class="hero" data-character="1009189" src="/app/assets/images/black_widow.jpg"/> -->
+        <!-- <%= image_tag("black_widow.jpg", class:"hero", data: { 'character' => 1009189}) %>
         <div class="hero-bio">
           <p>THIS IS DATARS for selection 1</p>
           <button type="button" id="reselect-hero">Reselect</button>
-        </div>
+        </div> -->
       </div>
+
     <!-- end hidden div for player 1 selection -->
 
     <!-- start row 1 of heroes -->
       <div class="row">
         <div class="four columns">
-
-          <%= image_tag("black_widow.jpg", class: "hero-thumb") do %>
-          <% end %>
-          <!-- <img class="hero-thumb" data-character="1009189" src="/images/black_widow.jpg"/> -->
+          <%= image_tag("black_widow.jpg", class:"hero-thumb", data: { 'character' => 1009189}) %>
         </div>
 
         <div class="four columns">
-          <img class="hero-thumb" data-character="1009220" src="/app/assets/images/captain_america.jpg"/>
+          <%= image_tag("captain_america.jpg", class:"hero-thumb", data: { 'character' => 1009220}) %>
         </div>
 
         <div class="four columns">
-          <img class ="hero-thumb" data-character="1009288"  src="/app/assets/images/elektra.jpg"/>
+          <%= image_tag("elektra.jpg", class:"hero-thumb", data: { 'character' => 1009288}) %>
         </div>
       </div>
     <!-- end row 1 of heroes -->
@@ -49,15 +44,15 @@
     <!-- start row 2 of heroes -->
       <div class="row">
         <div class="four columns">
-          <img class="hero-thumb" data-character="1009351" src="/app/assets/images/hulk.jpg"/>
+          <%= image_tag("hulk.jpg", class:"hero-thumb", data: { 'character' => 1009351}) %>
         </div>
 
         <div class="four columns">
-          <img class="hero-thumb" data-character="1009368" src="/app/assets/images/iron_man.jpg"/>
+          <%= image_tag("iron_man.jpg", class:"hero-thumb", data: { 'character' => 1009368}) %>
         </div>
 
         <div class="four columns">
-          <img class="hero-thumb" data-character="1009629" src="/app/assets/images/storm.jpg"/>
+          <%= image_tag("storm.jpg", class:"hero-thumb", data: { 'character' => 1009629}) %>
         </div>
       </div>
     <!-- end row 2 of heroes -->
@@ -65,11 +60,15 @@
     <!-- start row 3 of heroes -->
       <div class="row">
         <div class="four columns">
-          <img class="hero-thumb" data-character="1009664" src="/app/assets/images/thor.jpg"/>
+          <%= image_tag("thor.jpg", class:"hero-thumb", data: { 'character' => 1009664}) %>
         </div>
 
         <div class="four columns">
-          <img class="hero-thumb" data-character="1009718" src="/app/assets/images/wolverine.jpg"/>
+          <%= image_tag("wolverine.jpg", class:"hero-thumb", data: { 'character' => 1009718}) %>
+        </div>
+
+        <div class="four columns">
+          <%= image_tag("rocket_racoon.jpg", class:"hero-thumb", data: { 'character' => 1010744}) %>
         </div>
       </div>
     <!-- end row 3 of heroes -->
@@ -82,7 +81,7 @@
 
     <!-- start hidden div for player 2 selection -->
       <div class="six column selected-nemesis">
-        <img class="nemesis" data-character="1009189" src="/app/assets/images/black_widow.jpg"/>
+        <%= image_tag("apocalypse.jpg", class:"nemesis", data: { 'character' => 1009189}) %>
         <div class="nemesis-bio">
           <p>THIS IS DATARS for selection 2</p>
           <button type="button" id="reselect-nemesis">Reselect</button>
@@ -93,15 +92,15 @@
     <!-- start row 1 of nemeses -->
       <div class="row">
         <div class="four columns">
-            <img class="nemesis-thumb" data-character="1009156" src="/app/assets/images/apocalypse.jpg"/>
+          <%= image_tag("apocalypse.jpg", class:"nemesis-thumb", data: { 'character' => 1009156}) %>
         </div>
 
         <div class="four columns">
-          <img class="nemesis-thumb" data-character="1009227" src="/app/assets/images/carnage.jpg"/>
+          <%= image_tag("carnage.jpg", class:"nemesis-thumb", data: { 'character' => 1009227}) %>
         </div>
 
         <div class="four columns">
-          <img class="nemesis-thumb" data-character="1009281" src="/app/assets/images/doctor_doom.jpg"/>
+          <%= image_tag("doctor_doom.jpg", class:"nemesis-thumb", data: { 'character' => 1009281}) %>
         </div>
       </div>
     <!-- end row 1 of nemeses -->
@@ -109,15 +108,15 @@
     <!-- start row 2 of nemeses -->
       <div class="row">
         <div class="four columns">
-          <img class="nemesis-thumb" data-character="1009407" src="/app/assets/images/loki.jpg"/>
+          <%= image_tag("loki.jpg", class:"nemesis-thumb", data: { 'character' => 1009407}) %>
         </div>
 
         <div class="four columns">
-          <img class="nemesis-thumb" data-character="1009417" src="/app/assets/images/magneto.jpg"/>
+          <%= image_tag("magneto.jpg", class:"nemesis-thumb", data: { 'character' => 1009417}) %>
         </div>
 
         <div class="four columns">
-          <img class="nemesis-thumb" data-character="1009421" src="/assets/images/mandarin.jpg"/>
+          <%= image_tag("mandarin.jpg", class:"nemesis-thumb", data: { 'character' => 1009421}) %>
         </div>
       </div>
     <!-- end row 2 of nemeses -->
@@ -125,14 +124,19 @@
     <!-- start row 3 of nemeses -->
       <div class="row">
         <div class="four columns">
-          <img class="nemesis-thumb" data-character="1009465" src="/assets/images/mystique.jpg"/>
+          <%= image_tag("mystique.jpg", class:"nemesis-thumb", data: { 'character' => 1009465}) %>
         </div>
 
         <div class="four columns">
-          <img class="nemesis-thumb" data-character="1009685" src="/assets/images/ultron.jpg"/>
+          <%= image_tag("ultron.jpg", class:"nemesis-thumb", data: { 'character' => 1009685}) %>
+        </div>
+
+        <div class="four columns">
+          <%= image_tag("red_skull.jpg", class:"nemesis-thumb", data: { 'character' => 1009535}) %>
         </div>
       </div>
     <!-- end row 3 of nemeses -->
+
     </div>  <!-- end div id="nemesis-list" -->
   </div>  <!-- end div class="container" -->
 
