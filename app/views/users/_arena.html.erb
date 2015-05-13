@@ -1,54 +1,21 @@
-<html>
-<head>
-  <title>Arena</title>
-</head>
-
-<body>
-  <nav>
-    <a href="/"><h3>Home</h3></a>
-    <a href="#"><h3>Log Out</h3></a>
-  </nav>
-
-  <div class="timer">
-    <!-- we might be able to use CSS to build this out... -->
-  </div>
-
-</body>
-    <script type="text/template" class="template">
-
-      <div class="heroImage">
-        data-character="<%= data-character %>"
-        <%%= hero.health %>
-        <!-- html below is for health bar -->
-        <div class="health-bar" data-total="1000" data-value="1000">
-          <div class="bar">
-        <div class="hit"></div>
-      </div>
-
-      <div class="nemesisImage">
-        <%%= nemesis.img %>
-        <%%= nemesis.health %>
-        <!--html below is for health bar -->
-        <div class="health-bar" data-total="1000" data-value="1000">
-          <div class="bar">
-  	    <div class="hit"></div>
-
-        <br />
-
-        <button class="damage random">hit random</button>
-              </div>
-  </div>
+<div class="heroImage">
+  data-character="<%%= data-character %>"
+  <%%= hero.health %>
+  <!-- html below is for health bar -->
+  <div class="health-bar" data-total="1000" data-value="1000">
+    <div class="bar">
+  <div class="hit"></div>
 </div>
 
-  Code below is supposed to call the timer...
-  
-jQuery("#countdown").countDown({
-startNumber: 10,
-callBack: function(me) {
-  jQuery(me).text("All done! This is where you give the reward!").css("color", "#090");
-}
-});
+<div class="nemesisImage">
+  <%%= nemesis.img %>
+  <%%= nemesis.health %>
+  <!--html below is for health bar -->
+  <div class="health-bar" data-total="1000" data-value="1000">
+    <div class="bar">
+  <div class="hit"></div>
 
+  <br />
 
-    </script>
-</html>
+  <button class="damage random">hit random</button>
+</div>
