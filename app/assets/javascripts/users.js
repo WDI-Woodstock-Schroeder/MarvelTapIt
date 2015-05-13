@@ -11,7 +11,9 @@ $(document).ready(function() {
     var char = $(this).data("character");
     var filename = $(this).data("filename");
 
-    console.log(char)
+    // console.log(char)
+
+    var hero = {};
 
     $.ajax({
       method: 'get',
@@ -26,6 +28,10 @@ $(document).ready(function() {
         hname = data.data.results[0].name;
         hdescription = data.data.results[0].description;
 
+        hero.name = name;
+        hero.description = description;
+        hero.health = 100;
+
         // remove any elements on the page with class of 'hero'
         $('.hero').remove()
 
@@ -35,6 +41,11 @@ $(document).ready(function() {
         img.className = "hero";
 
         $('.selected-hero').prepend(img);
+
+        // if hero and nemesis exist, show play button
+        if ($(".nemesis").length && $(".hero").length) {
+          $(".play").show(500);
+        };
 
       }
     })
@@ -80,6 +91,11 @@ $(document).ready(function() {
         img.className = "nemesis";
 
         $('.selected-nemesis').prepend(img);
+
+        // if nemesis and hero exist, show play button
+        if ($(".nemesis").length && $(".hero").length) {
+          $(".play").show(500);
+        };
       }
     })
 
@@ -89,10 +105,12 @@ $(document).ready(function() {
       $(".nemesis-thumb").show(500);
     });
 
-    // hide all the heroes
-    if ($(".nemesis") && $(".hero")){
-      $(".play").show(500);
-    };
-
   });
+
+
+  $(".play").on('click', function() {
+
+
+  })
+
 })
