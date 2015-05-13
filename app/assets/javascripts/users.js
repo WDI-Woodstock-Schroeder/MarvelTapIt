@@ -28,8 +28,8 @@ $(document).ready(function() {
         hname = data.data.results[0].name;
         hdescription = data.data.results[0].description;
 
-        hero.name = name;
-        hero.description = description;
+        hero.name = hname;
+        hero.description = hdescription;
         hero.health = 100;
 
         // remove any elements on the page with class of 'hero'
