@@ -1,3 +1,5 @@
+
+
 <div class="container">
   <div class="row">
     <div class="twelve columns", class="submit_form">
@@ -19,6 +21,7 @@
 
 
 <script type="text/javascript">
+
   $('input[name="user[password]"]').on('keyup', function(){
     var field = $(this);
     if (field.val().length < 8){
@@ -26,7 +29,8 @@
     } else {
       $(this).css({backgroundColor: 'lightgreen'});
     }
-  })
+  });
+
   $('input[name="user[password_confirmation]"]').on('keyup', function(){
     var passwordConfirmationField = $(this);
     var passwordField = $('input[name="user[password]"]');
@@ -35,5 +39,6 @@
     } else {
       $(this).css({backgroundColor: 'lightgreen'});
     }
-  })
+  });
+
 </script>
