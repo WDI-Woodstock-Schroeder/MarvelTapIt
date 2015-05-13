@@ -69,6 +69,8 @@ $(document).ready(function() {
 
     console.log(char)
 
+    var nemesis = {};
+
     $.ajax({
       method: 'get',
       url: 'http://gateway.marvel.com:80/v1/public/characters/' + char + '?apikey=195de66a5cefd39b309c2eb0ca7463f1',
@@ -81,6 +83,10 @@ $(document).ready(function() {
 
         nname = data.data.results[0].name;
         ndescription = data.data.results[0].description;
+
+        nemesis.name = nname;
+        nemesis.description = ndescription;
+        nemesis.health = 100;
 
         // remove any page elements with class 'nemesis'
         $('.nemesis').remove()
