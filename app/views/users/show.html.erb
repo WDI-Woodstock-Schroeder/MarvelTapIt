@@ -17,10 +17,10 @@
     <!-- start hidden div for player 1 selection -->
       <div class="six column selected-hero">
 
-        <div class="hero-bio">
-          <p>THIS IS DATARS for selection 1</p>
-          <button type="button" id="reselect-hero">Reselect</button>
-        </div>
+
+          <%= render partial: 'hero_bio' %>
+
+
       </div>
 
     <!-- end hidden div for player 1 selection
@@ -82,12 +82,11 @@
     <!-- start hidden div for player 2 selection -->
       <div class="six column selected-nemesis">
 
-        <div class="nemesis-bio">
 
-          <%= %>
+          <%= render partial: 'nemesis_bio' %>
 
-          <button type="button" id="reselect-nemesis">Reselect</button>
-        </div>
+
+
       </div>
     <!-- end hidden div for player 2 selection -->
 
