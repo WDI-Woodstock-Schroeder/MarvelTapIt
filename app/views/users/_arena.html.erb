@@ -3,17 +3,30 @@
   <title>Arena</title>
 </head>
 
+<nav>
+  <a href="/"><h3>Home</h3></a>
+  <a href="#"><h3>Log Out</h3></a>
+</nav>
+
   <script type="text/template" class="template">
 
     <div class="heroImage">
-      <%%= hero.img %>
+      data-character="<%= data-character %>" 
       <%%= hero.health %>
+      <!-- we might be able to use CSS to build out the health bar... -->
     </div>
 
     <div class="nemesisImage">
       <%%= nemesis.img %>
       <%%= nemesis.health %>
+      <!-- we might be able to use CSS to build out the health bar... -->
     </div>
+
+    <div class="timer">
+      <!-- we might be able to use CSS to build this out... -->
+    </div>
+
+
 
   </script>
 </html>
