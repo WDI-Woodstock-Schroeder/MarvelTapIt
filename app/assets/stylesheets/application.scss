@@ -5,6 +5,20 @@
 
 $brandTypeFace: 'Bangers', cursive;
 
+// general layout styles :::
+
+*{
+  display: block;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+
+//
+
 h1 {
   font-family: $brandTypeFace;
   font-size: 100px;
@@ -18,6 +32,72 @@ h1 {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+
+
+
+// pick a player page styles :::
+
+#wrapper{
+  height: 600px;
+  width: 100%;
+  background-image: url(https://studiomaury.files.wordpress.com/2013/11/224.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+nav{
+  height: 10%;
+}
+
+.container{
+  height: 80%;
+}
+
+
+footer{
+  height: 5%;
+}
+
+.logo{
+
+}
+
+.row{
+  height: 20%;
+}
+
+#hero-list{
+  width: 45%;
+  margin-right: 5%;
+  padding: 0;
+  float: left;
+}
+
+#nemesis-list{
+  width: 45%;
+  margin-left: 5%;
+  padding: 0;
+  float: left;
+}
+
+img.hero-thumb{
+  width: 90%;
+  margin: 5px;
+  padding: 2px;
+  border-radius: 100%;
+  border: 2px solid rgba(20, 133, 204, 1);
+}
+
+img.nemesis-thumb{
+  width: 90%;
+  margin: 5px;
+  padding: 2px;
+  border-radius: 100%;
+  border: 2px solid rgba(255, 0, 0, 1);
+}
+
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
