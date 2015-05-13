@@ -1,16 +1,20 @@
-<h1>Register</h1>
-
-<%= form_for @user, class:  'new-user-form' do |f|%>
-  <%= f.label :username %>
-  <%= f.text_field :username %>
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-  <%= f.label :confirm_password %>
-  <%= f.password_field :password_confirmation %>
-  <%= f.submit %>
-<% end %>
-
-
+<div class="container">
+  <section class="row">
+    <div class="twelve columns", class="submit_form">
+      <h1>Register</h1>
+      <%= form_for @user, class:  'new-user-form' do |f|%>
+        <%= f.label :username %>
+        <%= f.text_field :username %>
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+        <%= f.label :confirm_password %>
+        <%= f.password_field :password_confirmation %>
+        <br>
+        <%= f.submit %>
+      <% end %>
+    </div>
+  </section>
+</div>
 
 <script type="text/javascript">
   $('input[name="user[password]"]').on('keyup', function(){
