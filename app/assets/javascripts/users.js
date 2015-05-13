@@ -10,6 +10,8 @@ $(document).ready(function() {
   $(".hero-thumb").on('click', function() {
 
     var char = $(this).data("character");
+    var filename = $(this).data("filename");
+
     console.log(char)
 
     $.ajax({
@@ -25,25 +27,16 @@ $(document).ready(function() {
 
         name = data.data.results[0].name;
         description = data.data.results[0].description;
-        // path = data.data.results[0].thumbnail.path;
-        // extension = data.data.results[0].thumbnail.extension;
-        // thumbnail = path + "." + extension;
 
-        regExp(name);
+        var img = document.createElement('img');
+        img.src = filename;
 
-      // $(".selected-hero").html(html)
+        $('.selected-hero').prepend(img);
+
       }
     })
 
   });
-
-
-  function regExp(name){
-    var img = name.replace(/\s+/g, '');
-    var image = img.toLowerCase();
-    var imgsrc = "<img src= \'" + image + ".jpg\'" + " />";
-    return imgsrc
-  };
 
 // show list of hero thumbnails for player reselection
   $("#reselect-hero").click(function(){
@@ -58,6 +51,8 @@ $(document).ready(function() {
   $(".nemesis-thumb").on('click', function() {
 
     var char = $(this).data("character");
+    var filename = $(this).data("filename");
+
     console.log(char)
 
     $.ajax({
@@ -72,9 +67,14 @@ $(document).ready(function() {
 
         name = data.data.results[0].name;
         description = data.data.results[0].description;
-        path = data.data.results[0].thumbnail.path;
-        extension = data.data.results[0].thumbnail.extension;
-        thumbnail = path + "." + extension;
+
+        var img = document.createElement('img', { 'class': 'hero' });
+
+        img.src = filename;
+
+        $('.selected-nemesis').prepend(img);
+
+
       }
     })
 
