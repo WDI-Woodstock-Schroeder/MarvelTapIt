@@ -4,25 +4,35 @@
 
 $(document).ready(function() {
 
+  $(".selected-hero").hide()
+  $(".selected-nemesis").hide()
+
   $(".hero-thumb").on('click', function() {
 
     var char = $(this).data("character");
     console.log(char)
 
-    $(".hero-thumb").hide(700)
-    $(".selected-hero").show(700)
-
-
     $.ajax({
       method: 'get',
-      url: 'http://gateway.marvel.com:80/v1/public/characters/" + char + "?apikey=195de66a5cefd39b309c2eb0ca7463f1',
+      url: 'http://gateway.marvel.com:80/v1/public/characters/' + char + '?apikey=195de66a5cefd39b309c2eb0ca7463f1',
       dataType: 'json',
       success: function(data){
         console.log(data);
-          $("#hero-list").hide
 
-        name = data.data.results[0].name;
-        description = data.data.results[0].description;
+          $(".hero-thumb").hide(700)
+          $(".selected-hero").show(700)
+
+
+          name = data.data.results[0].name;
+          description = data.data.results[0].description;
+          path = data.data.results[0].thumbnail.path;
+          extension = data.data.results[0].thumbnail.extension;
+          thumbnail = path + "." + extension;
+
+
+          $(".selected-hero").html(function() {
+              return "<img src=" + thumbnail + "/><div class='hero-bio'><p>THIS IS DATARS for selection 1</p><button type='button' id='reselect-hero'>Reselect</button></div>";
+            });
       }
     })
 
@@ -43,18 +53,21 @@ $(document).ready(function() {
     var char = $(this).data("character");
     console.log(char)
 
-    $(".nemesis-thumb").hide(700)
-
-    $(".selected-nemesis").show(700)
-
     $.ajax({
       method: 'get',
-      url: 'http://gateway.marvel.com:80/v1/public/characters/" + char + "?apikey=195de66a5cefd39b309c2eb0ca7463f1',
+      url: 'http://gateway.marvel.com:80/v1/public/characters/' + char + '?apikey=195de66a5cefd39b309c2eb0ca7463f1',
       dataType: 'json',
       success: function(data){
         console.log(data);
+
+        $(".nemesis-thumb").hide(700)
+        $(".selected-nemesis").show(700)
+
         name = data.data.results[0].name;
         description = data.data.results[0].description;
+        path = data.data.results[0].thumbnail.path;
+        extension = data.data.results[0].thumbnail.extension;
+        thumbnail = path + "." + extension;
       }
     })
 
