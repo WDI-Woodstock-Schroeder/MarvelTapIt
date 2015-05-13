@@ -24,12 +24,12 @@ $(document).ready(function() {
         $(".hero-thumb").hide(700)
         $(".selected-hero").show(700)
 
-
         name = data.data.results[0].name;
         description = data.data.results[0].description;
 
+        $('.hero').remove()
+
         var img = document.createElement('img');
-        
         img.src = filename;
         img.className = "hero";
 
@@ -69,6 +69,8 @@ $(document).ready(function() {
 
         name = data.data.results[0].name;
         description = data.data.results[0].description;
+
+        $('.nemesis').remove()
 
         var img = document.createElement('img');
 
