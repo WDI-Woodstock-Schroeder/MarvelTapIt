@@ -5,7 +5,7 @@
 $(document).ready(function() {
 
   $(".selected-hero").hide()
-  $(".selected-nemesis").hide()
+  $(".selected-hero").hide()
 
   $(".hero-thumb").on('click', function() {
 
@@ -19,28 +19,31 @@ $(document).ready(function() {
       success: function(data){
         console.log(data);
 
-          $(".hero-thumb").hide(700)
-          $(".selected-hero").show(700)
+        $(".hero-thumb").hide(700)
+        $(".selected-hero").show(700)
 
 
-          name = data.data.results[0].name;
-          description = data.data.results[0].description;
-          path = data.data.results[0].thumbnail.path;
-          extension = data.data.results[0].thumbnail.extension;
-          thumbnail = path + "." + extension;
+        name = data.data.results[0].name;
+        description = data.data.results[0].description;
+        // path = data.data.results[0].thumbnail.path;
+        // extension = data.data.results[0].thumbnail.extension;
+        // thumbnail = path + "." + extension;
 
+        regExp(name);
 
-
-            function escapeRegExp(name){
-              var imgsrc = name.replace(/\S/i, "\\$&");
-              var html = "<img src=" + name + ".jpg" + " />";
-            });
-
-            $(".selected-hero").html(html)
+      // $(".selected-hero").html(html)
       }
     })
 
   });
+
+
+  function regExp(name){
+    var img = name.replace(/\s+/g, '');
+    var image = img.toLowerCase();
+    var imgsrc = "<img src= \'" + image + ".jpg\'" + " />";
+    return imgsrc
+  };
 
 // show list of hero thumbnails for player reselection
   $("#reselect-hero").click(function(){
