@@ -11,7 +11,9 @@ $(document).ready(function() {
     var char = $(this).data("character");
     var filename = $(this).data("filename");
 
-    console.log(char)
+    // console.log(char)
+
+    var hero = {};
 
     $.ajax({
       method: 'get',
@@ -25,6 +27,10 @@ $(document).ready(function() {
 
         name = data.data.results[0].name;
         description = data.data.results[0].description;
+
+        hero.name = name;
+        hero.description = description;
+        hero.health = 100;
 
         // remove any elements on the page with class of 'hero'
         $('.hero').remove()
@@ -102,6 +108,9 @@ $(document).ready(function() {
   });
 
 
+  $(".play").on('click', function() {
 
+
+  })
 
 })
