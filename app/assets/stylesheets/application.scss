@@ -2,6 +2,14 @@
 @import 'skeleton.scss';
 @import url(http://fonts.googleapis.com/css?family=Bangers);
 
+
+$brandTypeFace: 'Bangers', cursive;
+
+h1 {
+  font-family: $brandTypeFace;
+  font-size: 100px;
+}
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
