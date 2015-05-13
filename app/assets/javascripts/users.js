@@ -29,7 +29,9 @@ $(document).ready(function() {
         description = data.data.results[0].description;
 
         var img = document.createElement('img');
+        
         img.src = filename;
+        img.className = "hero";
 
         $('.selected-hero').prepend(img);
 
@@ -68,9 +70,10 @@ $(document).ready(function() {
         name = data.data.results[0].name;
         description = data.data.results[0].description;
 
-        var img = document.createElement('img', { 'class': 'hero' });
+        var img = document.createElement('img');
 
         img.src = filename;
+        img.className = "nemesis";
 
         $('.selected-nemesis').prepend(img);
 
