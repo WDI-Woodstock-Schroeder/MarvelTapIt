@@ -11,6 +11,7 @@ $(document).ready(function(){
     app.nemesisClick();
     app.reselectHero();
     app.reselectNem();
+    app.resetHero();
 
   };
 

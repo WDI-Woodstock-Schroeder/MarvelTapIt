@@ -46,7 +46,7 @@ app.heroClick = function heroClickHandler(){
           $(".play").hide();
         };
 
-        $(".hero-bio")
+        // $(".hero-bio")
       }
     });
   });
