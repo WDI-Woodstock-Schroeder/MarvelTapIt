@@ -5,14 +5,10 @@ $(document).ready(function(){
 
 // call namespaced functions
   function setHandlers(){
-    resetHeroThumbHandler();
-    resetNemesisThumbHandler();
+    // app.reselectHero();
+    // app.reselectNem();
     app.heroClick();
     app.nemesisClick();
-    app.reselectHero();
-    app.reselectNem();
-    app.resetHero();
-
   };
 
   setHandlers();
