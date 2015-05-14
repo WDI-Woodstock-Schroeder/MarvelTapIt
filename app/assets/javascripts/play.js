@@ -8,8 +8,9 @@ app.play = function playHandler(){
 
 
     // <div class="six column selected-nemesis"></div>
-
+    $(".hero-bio").empty();
 
     // <div class="six column selected-hero"></div>
+    $(".nemesis-bio").empty();
   })
 }
