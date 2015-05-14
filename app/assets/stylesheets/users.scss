@@ -22,7 +22,7 @@ body {
 }
 
 nav{
-  height: 10%;
+  height: 17%;
 }
 
 .container{
@@ -82,6 +82,7 @@ div.selected-hero{
 div.selected-nemesis{
   z-index: 1;
   display: none;
+  height: 400px;
 }
 
 .hero{
@@ -121,4 +122,12 @@ div.nemesis-bio{
   border: 5px solid rgba(255, 0, 0, 1);
   border-radius: 30px;
   background-color: rgba(255, 255, 255, 1);
+}
+
+.winMessage{
+  z-index: 2;
+  position: relative;
+  max-width: 80%;
+  margin: 0 auto;
+  top: -340px;
 }
