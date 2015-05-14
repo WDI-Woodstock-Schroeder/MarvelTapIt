@@ -2,7 +2,7 @@ var app = app || {};
 
 app.nemesis_health_bar = function health(){
 
-  var hitBtn = $('.hero').click(),
+  var hitBtn = $('.nemesis').click(),
       reset = $('button.reset'),
       hBar = $('.nemesis-health'),
       bar = hBar.find('.bar'),
