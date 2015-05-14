@@ -1,10 +1,10 @@
 var app = app || {};
 
-app.health_bar = function health(){
+app.nemesis_health_bar = function health(){
 
-  var hitBtn = $('button.damage'),
+  var hitBtn = $('.hero').click(),
       reset = $('button.reset'),
-      hBar = $('.hero-health'),
+      hBar = $('.nemesis-health'),
       bar = hBar.find('.bar'),
       hit = hBar.find('.hit');
 
@@ -18,7 +18,7 @@ app.health_bar = function health(){
     }
     // max damage is essentially quarter of max life
     var damage = Math.floor(Math.random()*total);
-    damage = 100;
+    damage = 10;
     var newValue = value - damage;
     // calculate the percentage of the total width
     var hitWidth = (damage / total ) * 100 + "%";

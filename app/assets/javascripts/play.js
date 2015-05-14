@@ -13,7 +13,7 @@ app.play = function playHandler(){
     // <div class="six column selected-hero"></div>
     $(".nemesis-bio").empty();
 
-    var heroDiv = '<div class="hero-health"data-total="1000" data-value="1000"><div class="bar"><div class="hit"></div></div></div><br /><button class="damage random">hit random</button><button class="reset">reset</button>'
+    var heroDiv = '<div class="hero-health"data-total="1000" data-value="1000"><div class="bar"><div class="hit"></div></div></div><br /><button class="hero-damage random">hit random</button><button class="hero-reset">reset</button>'
 
     $(".hero-bio").append(heroDiv);
 
@@ -21,6 +21,7 @@ app.play = function playHandler(){
 
     $(".nemesis-bio").append(nemesisDiv);
 
-    app.health_bar();
+    app.hero_health_bar();
+    app.nemesis_health_bar();
   })
 }
