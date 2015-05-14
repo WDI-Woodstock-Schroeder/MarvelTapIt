@@ -1,4 +1,8 @@
-$(document).ready(function(){
+
+var app = app || {};
+
+  app.renderHero = function healthBar(){
+
   var hitBtn = $('button.damage'),
       reset = $('button.reset'),
       hBar = $('.health-bar'),
