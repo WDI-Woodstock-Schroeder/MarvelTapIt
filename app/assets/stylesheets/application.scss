@@ -74,3 +74,15 @@ h1 {
 
   transition: width .3s linear;
 }
+
+//
+
+//sass code below for rotating "WINNER" text
+@mixin rotated-text($num-letters: 7, $angle-span: 180deg, $angle-offset: 0deg) {
+$angle-per-char: $angle-span / $num-letters;
+@for $i from 1 through $num-letters {
+.char#{$i} {
+@include transform(rotate($angle-offset + $angle-per-char * $i))
+}
+}
+}

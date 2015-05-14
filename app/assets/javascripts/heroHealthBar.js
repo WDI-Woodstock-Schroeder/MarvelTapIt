@@ -12,13 +12,14 @@ app.hero_health_bar = function health(){
     var total = hBar.data('total'),
         value = hBar.data('value');
 
-    if( value < 0 ){
-			log("you dead, reset");
-      return;
+    if( value <= 0 ){
+			$('.hero').addClass('loser');
+      $('.hero-bio').addClass('loser');
+      app.winner();
     }
     // max damage is essentially quarter of max life
     var damage = Math.floor(Math.random()*total);
-    damage = 10;
+    damage = 1000;
     var newValue = value - damage;
     // calculate the percentage of the total width
     var hitWidth = (damage / total ) * 100 + "%";
