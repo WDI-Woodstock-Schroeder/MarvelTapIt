@@ -1,5 +1,3 @@
-
-
 function resetHeroThumbHandler() {
   $("#reselect-hero").click(function(){
     $(".selected-hero").hide(500);

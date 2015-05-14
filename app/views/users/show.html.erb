@@ -15,14 +15,7 @@
       <h4>Select a Hero</h4>
 
     <!-- start hidden div for player 1 selection -->
-      <div class="six column selected-hero">
-
-
-          <%= render partial: 'hero_bio' %>
-
-
-      </div>
-
+      <div class="six column selected-hero"></div>
     <!-- end hidden div for player 1 selection
 
     <!-- start row 1 of heroes -->
@@ -80,14 +73,7 @@
       <h4>Select a Nemesis</h4>
 
     <!-- start hidden div for player 2 selection -->
-      <div class="six column selected-nemesis">
-
-
-          <%= render partial: 'nemesis_bio' %>
-
-
-
-      </div>
+      <div class="six column selected-nemesis"></div>
     <!-- end hidden div for player 2 selection -->
 
     <!-- start row 1 of nemeses -->
@@ -138,9 +124,12 @@
       </div>
     <!-- end row 3 of nemeses -->
 
-    <button type="button" name="button" class="play">Play!</button>
-
     </div>  <!-- end div id="nemesis-list" -->
+
+    <div class="twelve columns">
+      <button type="button" name="button" class="play">Play!</button>
+    </div>
+
   </div>  <!-- end div class="container" -->
 
   <!-- <footer>
