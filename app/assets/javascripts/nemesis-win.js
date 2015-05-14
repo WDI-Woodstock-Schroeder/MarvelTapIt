@@ -7,4 +7,5 @@ app.nemesisWin = function newGame(){
 
   $('.selected-hero').append(rematchDiv);
 
+
 }

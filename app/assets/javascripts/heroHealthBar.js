@@ -16,6 +16,7 @@ app.hero_health_bar = function health(){
 			$('.hero').addClass('loser');
       $('.hero-bio').addClass('loser');
       app.nemesisWin();
+      $('.newGame').show();
     }
     // max damage is essentially quarter of max life
     var damage = Math.floor(Math.random()*total);
