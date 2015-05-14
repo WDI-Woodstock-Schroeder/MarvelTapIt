@@ -2,6 +2,7 @@
 var app = app || {};
 
 app.play = function playHandler(){
+  $('h4').hide();
   $(".play").show(500);
   $(".play").on('click', function() {
     $(".play").hide(500);
