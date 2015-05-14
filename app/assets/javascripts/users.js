@@ -21,9 +21,10 @@ $(document).ready(function(){
         name = data.data.results[0].name;
         description = data.data.results[0].description;
 
+
         // add key value pairs to hero object variable
-        hero.name = name;
-        hero.description = description;
+        hero.name = hname;
+        hero.description = hdescription;
         hero.health = 100;
 
         // remove any elements on the page with class of 'hero'
@@ -56,6 +57,8 @@ $(document).ready(function(){
     var filename = $(this).data("filename");
     var nemesis = {};
 
+    var nemesis = {};
+
     $.ajax({
       method: 'get',
       url: 'http://gateway.marvel.com:80/v1/public/characters/' + char + '?apikey=195de66a5cefd39b309c2eb0ca7463f1',
@@ -68,6 +71,10 @@ $(document).ready(function(){
 
         name = data.data.results[0].name;
         description = data.data.results[0].description;
+
+        nemesis.name = nname;
+        nemesis.description = ndescription;
+        nemesis.health = 100;
 
         // remove any page elements with class 'nemesis'
         $('.nemesis').remove()
