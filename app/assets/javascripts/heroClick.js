@@ -37,6 +37,7 @@ app.heroClick = function heroClickHandler(){
         // prepend new image to class 'selected-hero'
         $('.selected-hero').prepend(img);
         app.renderHero();
+        app.reselectHero();
 
         // if hero and nemesis exist, show play button
         if ($(".nemesis").length && $(".hero").length) {

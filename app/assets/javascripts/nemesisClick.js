@@ -6,7 +6,7 @@ app.nemesisClick = function nemesisClickHandler(){
 
     // remove any page elements with class 'nemesis'
     $('.nemesis').remove()
-    
+
     var char = $(this).data("character");
     var filename = $(this).data("filename");
     var nemesis = {};
@@ -36,6 +36,7 @@ app.nemesisClick = function nemesisClickHandler(){
 
         $('.selected-nemesis').prepend(img);
         app.renderNem();
+        app.reselectNem();
 
         // if nemesis and hero exist, show play button
         if ($(".nemesis").length && $(".hero").length) {
