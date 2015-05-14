@@ -12,7 +12,7 @@ app.nemesis_health_bar = function health(){
     var total = hBar.data('total'),
         value = hBar.data('value');
 
-    if( value < 0 ){
+    if( value <= 0 ){
       $('.nemesis').addClass('loser');
       $('.nemesis-bio').addClass('loser');
       app.winner();
