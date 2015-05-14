@@ -7,5 +7,9 @@ app.play = function playHandler(){
     $(".play").hide(500);
 
 
+    // <div class="six column selected-nemesis"></div>
+
+
+    // <div class="six column selected-hero"></div>
   })
 }

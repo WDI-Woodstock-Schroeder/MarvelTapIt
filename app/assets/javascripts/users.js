@@ -5,8 +5,6 @@ $(document).ready(function(){
 
 // call namespaced functions
   function setHandlers(){
-    // app.reselectHero();
-    // app.reselectNem();
     app.heroClick();
     app.nemesisClick();
   };
