@@ -12,15 +12,16 @@ app.nemesis_health_bar = function health(){
     var total = hBar.data('total'),
         value = hBar.data('value');
 
-    if( value <= 0 ){
+    if( value <= 0 && value > -1 ){
       $('.nemesis').addClass('loser');
       $('.nemesis-bio').addClass('loser');
       app.heroWin();
       $('.newGame').show();
+
     }
     // max damage is essentially quarter of max life
     var damage = Math.floor(Math.random()*total);
-    damage = 1000;
+    damage = 10;
     var newValue = value - damage;
     // calculate the percentage of the total width
     var hitWidth = (damage / total ) * 100 + "%";
@@ -41,6 +42,9 @@ app.nemesis_health_bar = function health(){
     if( value < 0){
       log("DEAD");
     }
+
+    document.getElementById('#kablam').play();
+
   });
 
   var keyClick = $(document).keypress(function(event){
@@ -50,7 +54,7 @@ app.nemesis_health_bar = function health(){
         var total = hBar.data('total'),
             value = hBar.data('value');
 
-        if( value <= 0 ){
+        if( value <= 0 && value > -1 ){
           $('.nemesis').addClass('loser');
           $('.nemesis-bio').addClass('loser');
           app.heroWin();
@@ -58,7 +62,7 @@ app.nemesis_health_bar = function health(){
         }
         // max damage is essentially quarter of max life
         var damage = Math.floor(Math.random()*total);
-        damage = 1000;
+        damage = 10;
         var newValue = value - damage;
         // calculate the percentage of the total width
         var hitWidth = (damage / total ) * 100 + "%";

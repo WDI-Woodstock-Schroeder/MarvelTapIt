@@ -13,7 +13,7 @@ app.hero_health_bar = function health(){
     var total = hBar.data('total'),
         value = hBar.data('value');
 
-    if( value <= 0 ){
+    if( value <= 0 && value > -1  ){
 			$('.hero').addClass('loser');
       $('.hero-bio').addClass('loser');
       app.nemesisWin();
@@ -52,7 +52,7 @@ app.hero_health_bar = function health(){
         var total = hBar.data('total'),
             value = hBar.data('value');
 
-        if( value <= 0 ){
+        if( value <= 0 && value > -1 ){
           $('.hero').addClass('loser');
           $('.hero-bio').addClass('loser');
           app.nemesisWin();

@@ -9,7 +9,7 @@ app.reselectNem = function reselectNemesis(){
     $(".nemesis-thumb").show(500);
 
     var nemDiv = $(".nemesis-bio");
-    $(".selected-nemesis").empty(nemDiv);
+    $(".selected-nemesis").empty();
 
   })
 
