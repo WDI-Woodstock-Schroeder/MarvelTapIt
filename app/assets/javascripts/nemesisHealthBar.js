@@ -43,6 +43,47 @@ app.nemesis_health_bar = function health(){
     }
   });
 
+  var keyClick = $(document).keypress(function(event){
+      if(event.keyCode == 108){
+
+        console.log("hit");
+        var total = hBar.data('total'),
+            value = hBar.data('value');
+
+        if( value <= 0 ){
+          $('.nemesis').addClass('loser');
+          $('.nemesis-bio').addClass('loser');
+          app.heroWin();
+          $('.newGame').show();
+        }
+        // max damage is essentially quarter of max life
+        var damage = Math.floor(Math.random()*total);
+        damage = 1000;
+        var newValue = value - damage;
+        // calculate the percentage of the total width
+        var hitWidth = (damage / total ) * 100 + "%";
+        var barWidth = (newValue / total) * 100 + "%";
+
+        // show hit bar and set the width
+        hit.css({'display':'block','width':hitWidth});
+        hBar.data('value', newValue);
+
+        setTimeout(function(){
+          hit.css({'width': '0'});
+          bar.css('width', barWidth + "%");
+        }, 500);
+        //bar.css('width', total - value);
+
+        log(value, damage, hitWidth);
+
+        if( value < 0){
+          log("DEAD");
+        }
+      }
+
+    })
+
+
   reset.on('click', function(e){
     hBar.data('value', hBar.data('total'));
 
