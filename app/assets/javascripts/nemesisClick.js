@@ -40,7 +40,7 @@ app.nemesisClick = function nemesisClickHandler(){
 
         // if nemesis and hero exist, show play button
         if ($(".nemesis").length && $(".hero").length) {
-          app.play();
+          app.playGame();
         }
         else {
           $(".play").hide();

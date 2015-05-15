@@ -1,12 +1,11 @@
 // game functions
 var app = app || {};
 
-app.play = function playHandler(){
+app.playGame = function playHandler(){
   $('h4').hide();
   $(".play").show(500);
   $(".play").on('click', function() {
     $(".play").hide(500);
-
 
     // <div class="six column selected-nemesis"></div>
     $(".hero-bio").empty();
