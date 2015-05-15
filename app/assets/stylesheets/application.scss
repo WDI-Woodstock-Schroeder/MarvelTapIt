@@ -1,83 +1,56 @@
-
-
 @import 'normalize.scss';
 @import 'skeleton.scss';
 @import 'users.scss';
+@import 'login_styles.scss';
+@import 'health_bar.scss';
 @import url(http://fonts.googleapis.com/css?family=Bangers);
+@import url(http://fonts.googleapis.com/css?family=Architects+Daughter);
 
 
-$brandTypeFace: 'Bangers', cursive;
 
-// general layout styles :::
+// // health bar styles
 
-// *{
-//   display: block;
+// .health-bar {
+//   -webkit-box-sizing: border-box;
+//   -moz-box-sizing: border-box;
+//   box-sizing: border-box;
+//   width: 200px;
+//   height: 20px;
+//   padding: 5px;
+//   background: #ddd;
+//   -webkit-border-radius: 5px;
+//   -moz-border-radius: 5px;
+//   border-radius: 5px;
+//   position: relative;
 // }
-
-body {
-  padding: 0px;
-  margin: 0px;
-}
-
 //
-
-h1 {
-  font-family: $brandTypeFace;
-  font-size: 100px;
-}
-
-#welcomeBody {
-
-}
-
-
-
-
-// health bar styles
-
-
-.health-bar {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 200px;
-  height: 20px;
-  padding: 5px;
-  background: #ddd;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  position: relative;
-}
-.bar {
-  background: #c54;
-  width: 100%;
-  height: 10px;
-  position: relative;
-
-  transition: width .3s linear;
-}
-
-.hit {
-  background: rgba(255,255,255,0.6);
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 10px;
-  width: 0px;
-
-  transition: width .3s linear;
-}
-
+// .bar {
+//   background: #c54;
+//   width: 100%;
+//   height: 10px;
+//   position: relative;
+//   transition: width .3s linear;
+// }
 //
-
-//sass code below for rotating "WINNER" text
-@mixin rotated-text($num-letters: 7, $angle-span: 180deg, $angle-offset: 0deg) {
-$angle-per-char: $angle-span / $num-letters;
-@for $i from 1 through $num-letters {
-.char#{$i} {
-@include transform(rotate($angle-offset + $angle-per-char * $i))
-}
-}
-}
+// .hit {
+//   background: rgba(255,255,255,0.6);
+//   display: none;
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   height: 10px;
+//   width: 0px;
+//   transition: width .3s linear;
+// }
+//
+// //
+//
+// //sass code below for rotating "WINNER" text
+// @mixin rotated-text($num-letters: 7, $angle-span: 180deg, $angle-offset: 0deg) {
+// $angle-per-char: $angle-span / $num-letters;
+// @for $i from 1 through $num-letters {
+// .char#{$i} {
+// @include transform(rotate($angle-offset + $angle-per-char * $i))
+// }
+// }
+// }
