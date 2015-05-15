@@ -18,6 +18,10 @@ body {
   background-attachment: fixed;
 }
 
+nav.login{
+  background-color: rgba(0, 0, 0, .8);
+}
+
 nav.login h1 {
   font-family: $brandTypeFace;
   font-size: 100px;

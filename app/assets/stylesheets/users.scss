@@ -43,7 +43,12 @@ h1 {
   text-align: center;
 }
 
-h4, h5, h6 {
+h4{
+  font-family: $brandTypeFace;
+  font-size: 30px;
+}
+
+h5, h6 {
   font-family: $brandTypeFace;
 }
 
@@ -147,6 +152,7 @@ h4{
   text-align: center;
   position: relative;
   width: 100%;
+  line-height: 60px;
   height: 60px;
   padding: 0px;
   -webkit-border-radius: 10px;
