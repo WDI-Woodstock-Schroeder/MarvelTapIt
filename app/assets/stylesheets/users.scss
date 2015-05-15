@@ -1,6 +1,8 @@
-
 $brandTypeFace: 'Bangers', cursive;
 $comicFont: 'Architects Daughter', cursive;
+$white: rgba(255, 255, 255, 1);
+$nemesisRed: rgba(255, 0, 0, 1);
+$heroBlue: rgba(20, 133, 204, 1);
 
 // pick a player page & general layout styles :::
 
@@ -19,11 +21,7 @@ body {
 }
 
 nav{
-  height: 17%;
-}
-
-.login{
-  background-color: rgba(0, 0, 0, .8);
+  height: 20%;
 }
 
 .container{
@@ -44,23 +42,7 @@ h1 {
   text-align: center;
 }
 
-h2{
-  font-family: $brandTypeFace;
-}
-
-h3{
-  font-family: $brandTypeFace;
-}
-
-h4{
-  font-family: $brandTypeFace;
-}
-
-h5{
-  font-family: $brandTypeFace;
-}
-
-h6{
+h4, h5, h6 {
   font-family: $brandTypeFace;
 }
 
@@ -69,10 +51,96 @@ p {
 }
 
 
+// Hero & Nemesis list styles :::
 
-// "Select Hero/Nemesis" styles
+#hero-list{
+  width: 45%;
+  margin-right: 5%;
+  padding: 0;
+  float: left;
+}
+
+#nemesis-list{
+  width: 45%;
+  margin-left: 5%;
+  padding: 0;
+  float: left;
+}
+
+.hero-thumb{
+  width: 90%;
+  margin: 5px;
+  padding: 2px;
+  border-radius: 100%;
+  border: 2px solid $heroBlue;
+  background-color: $white;
+}
+
+.nemesis-thumb{
+  width: 90%;
+  margin: 5px;
+  padding: 2px;
+  border-radius: 100%;
+  border: 2px solid $nemesisRed;
+  background-color: $white;
+}
+
+div.selected-hero{
+  z-index: 1;
+  display: none;
+}
+
+div.selected-nemesis{
+  z-index: 1;
+  display: none;
+  height: 400px;
+}
+
+.hero{
+  width: 80%;
+  margin: 0 10%;
+  padding: 5px;
+  border-radius: 100%;
+  border: 5px solid $heroBlue;
+  background-color: $white;
+}
+
+.loser{
+  background-color: rgba(255, 0, 0, .5);
+  opacity: .5;
+}
+
+.nemesis{
+  width: 80%;
+  margin: 0 10%;
+  padding: 5px;
+  border-radius: 100%;
+  border: 5px solid $nemesisRed;
+  background-color: $white;
+}
+
+div.hero-bio{
+  margin: 10px 0;
+  padding: 10px;
+  border: 5px solid $heroBlue;
+  border-radius: 30px;
+  background-color: $white;
+}
+
+div.nemesis-bio{
+  margin: 10px 0;
+  padding: 10px;
+  border: 5px solid $nemesisRed;
+  border-radius: 30px;
+  background-color: $white;
+}
+
+
+
+// "Select Hero/Nemesis" styles :::
+
 h4{
-  background-color: rgba(255,255,255,1);
+  background-color: $white;
   font-family: $comicFont, "Comic Sans MS", "Comic Sans";
   text-align: center;
   position: relative;
@@ -90,7 +158,7 @@ h4:after{
   position: absolute;
   border-style: solid;
   border-width: 15px 15px 0;
-  border-color: #FFFFFF transparent;
+  border-color: $white transparent;
   display: block;
   width: 0;
   z-index: 1;
@@ -113,95 +181,25 @@ h4:before{
 
 
 
+//"Play" and "New Game" buttons :::
+.actions{
+  height: 15%;
+}
 
-
-//Changes Ken made to the "Play" and "New Game" buttons
 .gameButtons{
-  color: white;
   font-family: $comicFont, "Comic Sans MS", "Comic Sans";
   font-size: 30px;
+  line-height: 15%;
+  padding: 25px 80px;
+  border: 3px solid #000;
+  border-radius: 20px;
+  background-color: $white;
+  color: #000;
+
 }
 
-#hero-list{
-  width: 45%;
-  margin-right: 5%;
-  padding: 0;
-  float: left;
-}
-
-#nemesis-list{
-  width: 45%;
-  margin-left: 5%;
-  padding: 0;
-  float: left;
-}
-
-.hero-thumb{
-  width: 90%;
-  margin: 5px;
-  padding: 2px;
-  border-radius: 100%;
-  border: 2px solid rgba(20, 133, 204, 1);
-  background-color: rgba(255, 255, 255, 1);
-}
-
-.nemesis-thumb{
-  width: 90%;
-  margin: 5px;
-  padding: 2px;
-  border-radius: 100%;
-  border: 2px solid rgba(255, 0, 0, 1);
-  background-color: rgba(255, 255, 255, 1);
-}
-
-div.selected-hero{
-  z-index: 1;
-  display: none;
-}
-
-div.selected-nemesis{
-  z-index: 1;
-  display: none;
-  height: 400px;
-}
-
-.hero{
-  width: 80%;
-  margin: 0 10%;
-  padding: 5px;
-  border-radius: 100%;
-  border: 5px solid rgba(20, 133, 204, 1);
-  background-color: rgba(255, 255, 255, 1);
-}
-
-.loser{
-  background-color: rgba(255, 0,0, .5);
-  opacity: .5;
-}
-
-.nemesis{
-  width: 80%;
-  margin: 0 10%;
-  padding: 5px;
-  border-radius: 100%;
-  border: 5px solid rgba(255, 0, 0, 1);
-  background-color: rgba(255, 255, 255, 1);
-}
-
-div.hero-bio{
-  margin: 10px 0;
-  padding: 10px;
-  border: 5px solid rgba(20, 133, 204, 1);
-  border-radius: 30px;
-  background-color: rgba(255, 255, 255, 1);
-}
-
-div.nemesis-bio{
-  margin: 10px 0;
-  padding: 10px;
-  border: 5px solid rgba(255, 0, 0, 1);
-  border-radius: 30px;
-  background-color: rgba(255, 255, 255, 1);
+.gameButtons:hover{
+  border: 3px solid $nemesisRed;
 }
 
 .winMessage{

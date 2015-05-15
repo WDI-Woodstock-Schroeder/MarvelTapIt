@@ -1,5 +1,6 @@
 $brandTypeFace: 'Bangers', cursive;
 $comicFont: 'Architects Daughter', cursive;
+$white: rgba(255, 255, 255, 1);
 
 // health bar styles :::
 
@@ -26,7 +27,7 @@ $comicFont: 'Architects Daughter', cursive;
 }
 
 .hit {
-  background: rgba(255,255,255,0.6);
+  background: rgba(255, 255, 255, 0.6);
   display: none;
   position: absolute;
   top: 0;
