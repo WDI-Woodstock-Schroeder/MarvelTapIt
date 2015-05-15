@@ -24,6 +24,5 @@ app.play = function playHandler(){
 
     app.hero_health_bar();
     app.nemesis_health_bar();
-    app.winlettering();
   })
 }

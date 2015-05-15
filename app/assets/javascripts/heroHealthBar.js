@@ -2,7 +2,12 @@ var app = app || {};
 
 app.hero_health_bar = function health(){
 
-  var hitBtn = $('.hero').click(),
+  var hitBtn = $('document').keydown(function(event){
+      // if(event.keyCode == 65){
+      //   $('.hero').click();
+      // }
+      console.log("Handler for .keypress() called.");
+    }),
       reset = $('button.hero-reset'),
       hBar = $('.hero-health'),
       bar = hBar.find('.bar'),
