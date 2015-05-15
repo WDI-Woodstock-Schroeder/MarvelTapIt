@@ -1,28 +1,14 @@
-== README
+#Welcome to the Marvel Universe!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Marvel TapIt is an interactive two player melee where each player presses a key to attack
+their opponent to elimination.  
 
-Things you may want to cover:
+This application was developed using Ruby on Rails and Javascript to create the animated environment.  The development team implemented this application to consume images and data from the Marvel API via AJAX calls to render character information.
 
-* Ruby version
+The development team came across challenges in regards to starting points for use of technologies..but ultimately....
 
-* System dependencies
+calling functions?
 
-* Configuration
+determining what technologies to use
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+<img src="mtiapp.gif">
