@@ -1,11 +1,10 @@
 <!-- Marvel: Tap It -->
 
 <body id="wrapper">
-
   <nav>
-      <h1>Marvel TapiT</h1>
+    <h1>Tap-It!</h1>
   </nav>
-
+</div>
   <div class="container">
 
     <div class="twelve columns actions">
@@ -136,8 +135,19 @@
 
   </div>  <!-- end div class="container" -->
 
-  <!-- <footer>
-    <p>oh my stars and garters!</p>
-  </footer> -->
+  <footer>
+    <div class="four columns footer">
+      <h6>Data provided by Marvel. © 2014 Marvel</h6>
+    </div>
+    <div class="four columns">
+      <a href="http://marvel.com"><button type="button" name="button" class='marvel'>Visit Marvel</button></a>
+    </div>
+    <div class="four columns">
+      <%= form_tag('/log_out', method: :delete, :id => "logOut") do %>
+      <%= submit_tag "Sign-Out" %>
+      <% end %>
+    </div>
+
+  </footer>
 
 </body>

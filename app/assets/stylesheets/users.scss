@@ -13,28 +13,37 @@ body {
 }
 
 #wrapper{
-  height: 600px;
+  height: 100%;
   width: 100%;
-  background-image: url(http://ipadair.2048x.org/wp-content/miniwallpaper/20121206/12ekcry4pkz44.jpg);
+  padding: 0px;
+  margin: 0px;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-image: url(http://ipadair.2048x.org/wp-content/miniwallpaper/20121206/12ekcry4pkz44.jpg);
+
+  // background-repeat: no-repeat;
 }
 
 nav{
-  height: 20%;
+  height: 15%;
 }
 
 .container{
-  height: 80%;
+  height: 70%;
+  margin-bottom: 100px;
 }
 
 footer{
-  height: 5%;
+  width: 100%;
+  // margin-top: 100px;
+  padding-top: 3px;
+  background-color: rgba(0, 0, 0, .6);
+  position: fixed;
+  bottom: 0;
 }
 
 .row{
-  height: 20%;
+  height: 30%;
 }
 
 h1 {
@@ -48,8 +57,14 @@ h4{
   font-size: 30px;
 }
 
-h5, h6 {
+h5{
   font-family: $brandTypeFace;
+}
+
+h6 {
+  font-family: $brandTypeFace;
+  color: $white;
+  font-size: 20px;
 }
 
 p {
@@ -242,6 +257,15 @@ h4:before{
 
   p{
     font-size: 12px;
+  }
+
+}
+
+
+@media only screen and (max-width:450px){
+
+  h4{
+    font-size: 18px;
   }
 
 }
