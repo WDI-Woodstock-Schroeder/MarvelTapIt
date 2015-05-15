@@ -12,6 +12,52 @@ body {
   margin: 0px;
 }
 
+h1{
+  text-align: center;
+}
+
+// Changes I made to "SELECT HERO/NEMESIS" sectioin
+h4{
+  background-color: rgba(255,255,255,1);
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 60px;
+  padding: 0px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 8px;
+  border: #000000 solid 4px;
+}
+
+h4:after{
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 15px 15px 0;
+  border-color: #FFFFFF transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  bottom: -15px;
+  left: 57px;
+}
+
+h4:before{
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 18px 18px 0;
+  border-color: #000000 transparent;
+  display: block;
+  width: 0;
+  z-index: 0;
+  bottom: -22px;
+  left: 54px;
+}
+
+
 #wrapper{
   height: 600px;
   width: 100%;
@@ -40,6 +86,13 @@ footer{
 
 .row{
   height: 20%;
+}
+
+//Changes Ken made to the "Play" and "New Game" buttons
+.gameButtons{
+  color: white;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size: 30px;
 }
 
 #hero-list{
