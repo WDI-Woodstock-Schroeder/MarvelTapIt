@@ -1,11 +1,8 @@
-// // Place all the styles related to the users controller here.
-// // They will automatically be included in application.css.
-// // You can use Sass (SCSS) here: http://sass-lang.com/
-//
-// // pick a player page styles :::
-//
-//
 
+$brandTypeFace: 'Bangers', cursive;
+$comicFont: 'Architects Daughter', cursive;
+
+// pick a player page & general layout styles :::
 
 body {
   padding: 0px;
@@ -22,24 +19,107 @@ body {
 }
 
 nav{
-  height: 10%;
+  height: 17%;
+}
+
+.login{
+  background-color: rgba(0, 0, 0, .8);
 }
 
 .container{
   height: 80%;
 }
 
-
 footer{
   height: 5%;
 }
 
-.logo{
-
-}
-
 .row{
   height: 20%;
+}
+
+h1 {
+  font-family: $brandTypeFace;
+  font-size: 100px;
+  text-align: center;
+}
+
+h2{
+  font-family: $brandTypeFace;
+}
+
+h3{
+  font-family: $brandTypeFace;
+}
+
+h4{
+  font-family: $brandTypeFace;
+}
+
+h5{
+  font-family: $brandTypeFace;
+}
+
+h6{
+  font-family: $brandTypeFace;
+}
+
+p {
+  font-family: $comicFont;
+}
+
+
+
+// "Select Hero/Nemesis" styles
+h4{
+  background-color: rgba(255,255,255,1);
+  font-family: $comicFont, "Comic Sans MS", "Comic Sans";
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 60px;
+  padding: 0px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 8px;
+  border: #000000 solid 4px;
+}
+
+h4:after{
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 15px 15px 0;
+  border-color: #FFFFFF transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  bottom: -15px;
+  left: 57px;
+}
+
+h4:before{
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 18px 18px 0;
+  border-color: #000000 transparent;
+  display: block;
+  width: 0;
+  z-index: 0;
+  bottom: -22px;
+  left: 54px;
+}
+
+
+
+
+
+//Changes Ken made to the "Play" and "New Game" buttons
+.gameButtons{
+  color: white;
+  font-family: $comicFont, "Comic Sans MS", "Comic Sans";
+  font-size: 30px;
 }
 
 #hero-list{
@@ -82,6 +162,7 @@ div.selected-hero{
 div.selected-nemesis{
   z-index: 1;
   display: none;
+  height: 400px;
 }
 
 .hero{
@@ -91,6 +172,11 @@ div.selected-nemesis{
   border-radius: 100%;
   border: 5px solid rgba(20, 133, 204, 1);
   background-color: rgba(255, 255, 255, 1);
+}
+
+.loser{
+  background-color: rgba(255, 0,0, .5);
+  opacity: .5;
 }
 
 .nemesis{
@@ -116,4 +202,12 @@ div.nemesis-bio{
   border: 5px solid rgba(255, 0, 0, 1);
   border-radius: 30px;
   background-color: rgba(255, 255, 255, 1);
+}
+
+.winMessage{
+  z-index: 2;
+  position: relative;
+  max-width: 80%;
+  margin: 0 auto;
+  top: -340px;
 }
