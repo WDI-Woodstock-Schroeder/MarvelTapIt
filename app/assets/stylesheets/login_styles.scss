@@ -170,3 +170,34 @@ label > .label-body {
   display: inline-block;
   margin-left: .5rem;
   font-weight: normal; }
+
+
+@media only screen and (max-width:650px){
+
+  // branded skeleton code
+  // BUTTON STYLES
+  .button,
+  button,
+  input[type="submit"],
+  input[type="reset"],
+  input[type="button"] {
+    padding: 0 10px;
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  // branded skeleton code
+  // INPUT STYLES
+  input[type="email"],
+  input[type="number"],
+  input[type="search"],
+  input[type="text"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="password"],
+  textarea,
+  select {
+    height: 30px;
+    padding: 0px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  }
+}

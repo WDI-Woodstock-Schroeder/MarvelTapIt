@@ -4,6 +4,7 @@ $white: rgba(255, 255, 255, 1);
 $nemesisRed: rgba(255, 0, 0, 1);
 $heroBlue: rgba(20, 133, 204, 1);
 
+
 // pick a player page & general layout styles :::
 
 body {
@@ -48,6 +49,7 @@ h4, h5, h6 {
 
 p {
   font-family: $comicFont;
+  font-size: 16px;
 }
 
 
@@ -179,6 +181,17 @@ h4:before{
   left: 54px;
 }
 
+.reselect-hero{
+  color: #000;
+}
+
+.reselect-hero:hover{
+  color: $heroBlue;
+}
+
+.reselect-nemesis{
+  color: #000;
+}
 
 
 //"Play" and "New Game" buttons :::
@@ -195,7 +208,6 @@ h4:before{
   border-radius: 20px;
   background-color: $white;
   color: #000;
-
 }
 
 .gameButtons:hover{
@@ -208,4 +220,22 @@ h4:before{
   max-width: 80%;
   margin: 0 auto;
   top: -340px;
+}
+
+
+// font-size adjustments in media queries :::
+@media only screen and (max-width:650px){
+
+  h1{
+    font-size: 50px;
+  }
+
+  h4{
+    font-size: 24px;
+  }
+
+  p{
+    font-size: 12px;
+  }
+
 }
