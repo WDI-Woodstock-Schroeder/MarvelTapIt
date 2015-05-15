@@ -2,7 +2,7 @@
 
 <body id="wrapper">
   <nav>
-      <h1>Tap-It!</h1>
+    <h1>Tap-It!</h1>
   </nav>
 
   <div class="container">
@@ -136,11 +136,16 @@
   </div>  <!-- end div class="container" -->
 
   <footer>
-    <div class="six columns footer">
+    <div class="four columns footer">
       <h6>Data provided by Marvel. © 2014 Marvel</h6>
     </div>
-    <div class="six columns">
+    <div class="four columns">
       <a href="http://marvel.com"><button type="button" name="button" class='marvel'>Visit Marvel</button></a>
+    </div>
+    <div class="four columns">
+      <%= form_tag('/log_out', method: :delete, :id => "logOut") do %>
+      <%= submit_tag "Sign-Out" %>
+      <% end %>
     </div>
 
   </footer>
