@@ -1,25 +1,79 @@
-// // Place all the styles related to the users controller here.
-// // They will automatically be included in application.css.
-// // You can use Sass (SCSS) here: http://sass-lang.com/
-//
-// // pick a player page styles :::
-//
-//
 
+$brandTypeFace: 'Bangers', cursive;
+$comicFont: 'Architects Daughter', cursive;
+
+// pick a player page & general layout styles :::
 
 body {
   padding: 0px;
   margin: 0px;
 }
 
-h1{
+#wrapper{
+  height: 600px;
+  width: 100%;
+  background-image: url(http://ipadair.2048x.org/wp-content/miniwallpaper/20121206/12ekcry4pkz44.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+nav{
+  height: 17%;
+}
+
+.login{
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.container{
+  height: 80%;
+}
+
+footer{
+  height: 5%;
+}
+
+.row{
+  height: 20%;
+}
+
+h1 {
+  font-family: $brandTypeFace;
+  font-size: 100px;
   text-align: center;
 }
 
-// Changes I made to "SELECT HERO/NEMESIS" sectioin
+h2{
+  font-family: $brandTypeFace;
+}
+
+h3{
+  font-family: $brandTypeFace;
+}
+
+h4{
+  font-family: $brandTypeFace;
+}
+
+h5{
+  font-family: $brandTypeFace;
+}
+
+h6{
+  font-family: $brandTypeFace;
+}
+
+p {
+  font-family: $comicFont;
+}
+
+
+
+// "Select Hero/Nemesis" styles
 h4{
   background-color: rgba(255,255,255,1);
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-family: $comicFont, "Comic Sans MS", "Comic Sans";
   text-align: center;
   position: relative;
   width: 100%;
@@ -58,40 +112,13 @@ h4:before{
 }
 
 
-#wrapper{
-  height: 600px;
-  width: 100%;
-  background-image: url(http://ipadair.2048x.org/wp-content/miniwallpaper/20121206/12ekcry4pkz44.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-nav{
-  height: 17%;
-}
-
-.container{
-  height: 80%;
-}
 
 
-footer{
-  height: 5%;
-}
-
-.logo{
-
-}
-
-.row{
-  height: 20%;
-}
 
 //Changes Ken made to the "Play" and "New Game" buttons
 .gameButtons{
   color: white;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-family: $comicFont, "Comic Sans MS", "Comic Sans";
   font-size: 30px;
 }
 
