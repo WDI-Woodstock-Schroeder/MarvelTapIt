@@ -20,7 +20,7 @@ app.nemesis_health_bar = function health(){
     }
     // max damage is essentially quarter of max life
     var damage = Math.floor(Math.random()*total);
-    damage = 1000;
+    damage = 10;
     var newValue = value - damage;
     // calculate the percentage of the total width
     var hitWidth = (damage / total ) * 100 + "%";
