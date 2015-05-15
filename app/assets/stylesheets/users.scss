@@ -80,7 +80,7 @@ p {
   padding: 2px;
   border-radius: 100%;
   border: 2px solid $heroBlue;
-  // background-color: $white;
+  background-color: $white;
 }
 
 .nemesis-thumb{
@@ -89,7 +89,7 @@ p {
   padding: 2px;
   border-radius: 100%;
   border: 2px solid $nemesisRed;
-  // background-color: $white;
+  background-color: $white;
 }
 
 div.selected-hero{
@@ -109,7 +109,7 @@ div.selected-nemesis{
   padding: 5px;
   border-radius: 100%;
   border: 5px solid $heroBlue;
-  // background-color: $white;
+  background-color: $white;
 }
 
 .loser{
@@ -123,7 +123,7 @@ div.selected-nemesis{
   padding: 5px;
   border-radius: 100%;
   border: 5px solid $nemesisRed;
-  // background-color: $white;
+  background-color: $white;
 }
 
 div.hero-bio{
