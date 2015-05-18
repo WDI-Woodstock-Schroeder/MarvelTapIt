@@ -4,6 +4,13 @@
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
   <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
   <title>Marvel TapiT</title>
+  <!-- first link imported to shake hero and nemesis imgs -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+  <!-- second link imported to shake hero and nemesis imgs -->
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <!-- third link imported to shake hero and nemesis imgs -->
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
   <script type='text/template' id='sample'>
     <div id="<%%= id %>">
@@ -31,6 +38,12 @@
 
       <button class="damage random">hit random</button>
     </div>
+    <!-- fourth and final link imported to shake hero and nemesis imgs -->
+    <script>
+      $( document ).click(function() {
+        $( ".nemesisImage" ).effect( "shake" );
+      });
+    </script>
   </script>
 
   <%= stylesheet_link_tag 'application', media: 'all' %>

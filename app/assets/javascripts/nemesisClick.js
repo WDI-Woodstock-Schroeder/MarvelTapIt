@@ -24,7 +24,7 @@ app.nemesisClick = function nemesisClickHandler(){
         nname = data.data.results[0].name;
         ndescription = data.data.results[0].description;
 
-        // add key value pairs to hero object variable
+        // add key value pairs to nemesis object variable
         nemesis.name = nname;
         nemesis.description = ndescription;
         nemesis.health = 100;

@@ -7,16 +7,16 @@ app.nemesis_health_bar = function health(){
       hBar = $('.hero-health'),
       bar = hBar.find('.bar'),
       hit = hBar.find('.hit');
-      
+
   //below is code for damage by clicking on image
   hitBtn.on("click", function(){
     var total = hBar.data('total'),
         value = hBar.data('value');
 
     if( value <= 0 && value > -1 ){
-      $('.nemesis').addClass('loser');
-      $('.nemesis-bio').addClass('loser');
-      app.heroWin();
+      $('.hero').addClass('loser');
+      $('.hero-bio').addClass('loser');
+      app.nemesisWin();
       $('.newGame').show();
 
     }
@@ -57,9 +57,9 @@ app.nemesis_health_bar = function health(){
             value = hBar.data('value');
 
         if( value <= 0 && value > -1 ){
-          $('.nemesis').addClass('loser');
-          $('.nemesis-bio').addClass('loser');
-          app.heroWin();
+          $('.hero').addClass('loser');
+          $('.hero-bio').addClass('loser');
+          app.nemesisWin();
           $('.newGame').show();
         }
         // max damage is essentially quarter of max life

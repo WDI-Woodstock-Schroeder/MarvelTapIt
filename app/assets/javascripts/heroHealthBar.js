@@ -15,9 +15,9 @@ app.hero_health_bar = function health(){
         value = hBar.data('value');
 
     if( value <= 0 && value > -1  ){
-			$('.hero').addClass('loser');
-      $('.hero-bio').addClass('loser');
-      app.nemesisWin();
+			$('.nemesis').addClass('loser');
+      $('.nemesis-bio').addClass('loser');
+      app.heroWin();
       $('.newGame').show();
     }
     // max damage is essentially quarter of max life
@@ -54,9 +54,9 @@ app.hero_health_bar = function health(){
             value = hBar.data('value');
 
         if( value <= 0 && value > -1 ){
-          $('.hero').addClass('loser');
-          $('.hero-bio').addClass('loser');
-          app.nemesisWin();
+          $('.nemesis').addClass('loser');
+          $('.nemesis-bio').addClass('loser');
+          app.heroWin();
           $('.newGame').show();
         }
         // max damage is essentially quarter of max life
