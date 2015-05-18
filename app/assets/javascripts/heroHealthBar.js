@@ -6,6 +6,7 @@ app.hero_health_bar = function health(){
   var bar = hBar.find('.bar');
   var hit = hBar.find('.hit');
 
+  //Below is code for attacking by clicking on image
   var hitBtn = $('.hero').click();
 
   hitBtn.on("click", function(){
@@ -44,7 +45,7 @@ app.hero_health_bar = function health(){
     }
   });
 
-
+  //below is code for damage by keyboard
   var keyClick = $(document).keypress(function(event){
       if(event.keyCode == 97){
 

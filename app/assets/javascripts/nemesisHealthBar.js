@@ -7,7 +7,8 @@ app.nemesis_health_bar = function health(){
       hBar = $('.hero-health'),
       bar = hBar.find('.bar'),
       hit = hBar.find('.hit');
-
+      
+  //below is code for damage by clicking on image
   hitBtn.on("click", function(){
     var total = hBar.data('total'),
         value = hBar.data('value');
@@ -47,6 +48,7 @@ app.nemesis_health_bar = function health(){
 
   });
 
+  //below is code for damage by keyboard
   var keyClick = $(document).keypress(function(event){
       if(event.keyCode == 108){
 
