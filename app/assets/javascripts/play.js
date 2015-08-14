@@ -13,11 +13,11 @@ app.playGame = function playHandler(){
     // <div class="six column selected-hero"></div>
     $(".nemesis-bio").empty();
 
-    var heroDiv = '<div class="hero-health"data-total="1000" data-value="1000"><div class="bar"><div class="hit"></div></div></div>'
+    var heroDiv = '<div class="heroBarValue"></div>'
 
     $(".hero-bio").append(heroDiv);
 
-    var nemesisDiv = '<div class="nemesis-health"data-total="1000" data-value="1000"><div class="bar"><div class="hit"></div></div></div>'
+    var nemesisDiv = '<div class="nemesisBarValue"></div>'
 
     $(".nemesis-bio").append(nemesisDiv);
 
