@@ -5,7 +5,7 @@ var hamt = 100;
 app.hero_health_bar = function attack(event){
 
   //below is code for damage by clicking on image
-  $('.nemesis').on("tap", function(event){
+  $('.nemesis').on('click', function(event){
       hamt = hamt - 5;
       $('.heroBarValue').css('width', hamt + '%' );
       console.log(hamt);
