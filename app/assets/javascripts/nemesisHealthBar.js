@@ -29,7 +29,7 @@ app.nemesis_health_bar = function health(){
 ///below is code for damage by keyboard
 /////////////////////////////////////////
   var keyClick = $(document).keypress(function(event){
-      if(event.keyCode == 97){
+      if(event.keyCode == 97 || event.keyCode == 65){
 
         namt = namt - 5;
         $('.nemesisBarValue').css('width', namt + '%' )
